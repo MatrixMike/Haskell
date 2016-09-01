@@ -20,7 +20,7 @@ main = do
     printNumbers
     putStrLn (show (degrees 20))
     putStrLn (show (inc 10))
-    --putStrLn (show myMap 
+--putStrLn (show myMap     <finish this Mike
     
  --   print sqinc 4
  --   putStrLn ans
