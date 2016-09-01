@@ -7,7 +7,9 @@ main = do
     --let myMap f (x:xs) = f x : myMap f xs
     putStrLn "Hello"
     putStrLn "Line 2: "
-    let myVariable = 3
+--   let myVariable = 3
+--   myVariable :: Int
+--    myVariable = 3
     let inc x = x + 1
     let sq x = x * x
     let sqinc x = inc x * inc x
@@ -16,6 +18,7 @@ main = do
     print ans
     printNumbers
     putStrLn (show (degrees 20))
+    --putStrLn (show myMap 
     
  --   print sqinc 4
  --   putStrLn ans
@@ -29,6 +32,11 @@ printNumbers = do
 {-| Converts degrees into the standard angle measurement (radians). -}
 degrees :: Double -> Double
 degrees n = n * pi / 180
+myMap :: (a -> b ) -> [a] -> [b]
+myMap f [] = []
+myMap f (x:xs) = f x : myMap f xs
+myVariable :: Int
+myVariable = 3
     
 
 
