@@ -1,5 +1,5 @@
 -- main = print "Hello, World"
--- 01.09.2016
+-- 01.09.2016 22:42:19
 -- checkout the use of {} around block of do
 main = do 
     --let myMap :: (a -> b ) -> [a] -> [b]
@@ -24,6 +24,10 @@ printNumbers = do
     let sq x = x * x
     let sqinc x = inc x * inc x
     putStrLn (show (sqinc 4))
+    
+{-| Converts degrees into the standard angle measurement (radians). -}
+degrees :: Double -> Double
+degrees n = n * pi / 180
     
 
 
