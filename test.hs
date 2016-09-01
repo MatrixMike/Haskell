@@ -1,4 +1,16 @@
-main = print "Hello, World"
+-- main = print "Hello, World"
+main = do 
+    putStrLn "Hello"
+    putStrLn "Line 2"
+
+
+
+
+   
+myVariable = 2
+putStrLn myVariable
+
+
 myVariable = 2
 -- print myVariable
 -- print myVariable
@@ -21,7 +33,7 @@ list1 = [1,2,3,4]
 list2 = 1: 2 : []
 list3 = "hello" : "world" : []
 list4 = [1,2,3,4,5,6,7,8,9,0]
- 
+ -- twolists = list4 ++ list4
 myHead (x:xs) = x 
 -- also e.g. head
 -- myFirstElement = myHead list1
@@ -33,8 +45,10 @@ myLength (x:xs) = 1 + myLength xs
 myLength1[] = 0 
 myLength1 (x:xs) = 1 + myLength1 xs
 
-inc x = x +1
+inc x = x + 1
 sq x = x * x
+sqinc x = inc x * inc x
+-- myMap sqinc [1,2,3,4,5]
 -- myMap inc [1,2,3]
 myMap :: (a -> b ) -> [a] -> [b]
 myMap f [] = []
@@ -42,4 +56,5 @@ myMap f (x:xs) = f x : myMap f xs
 
 
 --lyndon1 
-putStr "hi there" >> putStr "World"  
+--  putStr "hi there" >> putStr "World"  
+
