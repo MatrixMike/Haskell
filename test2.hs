@@ -15,6 +15,7 @@ main = do
     let ans = sqinc 4
     print ans
     printNumbers
+    putStrLn (show (degrees 20))
     
  --   print sqinc 4
  --   putStrLn ans
