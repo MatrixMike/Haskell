@@ -3,6 +3,8 @@
 -- checkout the use of {} around block of do
  
 -- haskell.org
+--module Game1 where      -- investigate
+import GHC.Generics
 main = do 
     --let myMap :: (a -> b ) -> [a] -> [b]
     --let myMap f [] = []
@@ -41,7 +43,10 @@ printNumbers = do
     putStrLn ( show (liIonI))   
     putStrLn ( show (37/10)) 
     putStrLn ("Now some lambda work..")
-    putStrLn ( show (map (\x -> x+1)[ 7,5..  -6 ]))   -- lambda
+    putStrLn ( show (map (\x -> x + 1)[ 7,5..  -6 ]))   -- lambda
+    putStrLn ( show (zip [1,2,3] [6,7,8,9]))
+ --   putStrLn ( show (zip [1,2,3] ["a","b" ..  "f"]))
+    putStrLn ( show (zip [1,2,3] ["a","b","f"]))
     
 {-| Converts degrees into the standard angle measurement (radians). -}
 degrees :: Double -> Double
@@ -89,6 +94,8 @@ liIonI = [37, 74 .. 300]
 --Linc \x -> x + 1
 
 -- invaderPoss = map (\x -> (x, yy)) xposs
+--[r1,r2,r3] = map (x=x+1) ( zip [1,2,3] ["a","b","c"]  )
+
 
     
 
