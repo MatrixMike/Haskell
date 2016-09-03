@@ -32,6 +32,8 @@ printNumbers = do
     putStrLn ( show ( myMap inc [2,3,4]))
     putStrLn ( show ( myMap sqinc [2,3,4]))
     putStrLn (show (sqinc 4))
+
+    putStrLn (show (xposs))
     
 {-| Converts degrees into the standard angle measurement (radians). -}
 degrees :: Double -> Double
@@ -51,6 +53,11 @@ sq p = p * p
 
 sqinc :: Int -> Int
 sqinc x = inc x * inc x
+
+xposs :: [Int]
+xposs = [-42, -36 .. 12]
+    -- xposs = [-42, -36 .. 12]
+-- putStrLn (xposs)
 
     
 
