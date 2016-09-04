@@ -96,7 +96,8 @@ liIonI = [37, 74 .. 300]
 -- invaderPoss = map (\x -> (x, yy)) xposs
 --[r1,r2,r3] = map (x=x+1) ( zip [1,2,3] ["a","b","c"]  )
 
-
+-- array2D :: [Int][Int]
+-- array2D = [1,2,3,4][[2,3,4]
     
 
 
