@@ -8,10 +8,10 @@ main = do
 
    
 myVariable = 2
-putStrLn myVariable
+-- putStrLn myVariable
 
 
-myVariable = 2
+myVariableA = 2
 -- print myVariable
 -- print myVariable
 myTuplePair = (1, "hello")
