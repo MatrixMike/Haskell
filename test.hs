@@ -2,14 +2,11 @@
 main = do 
     putStrLn "Hello"
     putStrLn "Line 2"
+    print list4
+    
 
-
-
-
-   
 myVariable = 2
 -- putStrLn myVariable
-
 
 myVariableA = 2
 -- print myVariable
