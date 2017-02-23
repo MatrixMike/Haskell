@@ -20,7 +20,7 @@ myAdd x y = x + y
 
 -- head list2
 
-myFloat = (1.1  :: Float)
+myFloat = 1.1  :: Float
 -- myMultiply :: Int -> Int -> Int -> Int
 --myMultiply :: Int -> Int -> (Int -> Int))
 myMultiply x y z = x* y * z
@@ -30,7 +30,7 @@ list1 = [1,2,3,4]
 list2 = 1: 2 : []
 list3 = "hello" : "world" : []
 list4 = [1,2,3,4,5,6,7,8,9,0]
- -- twolists = list4 ++ list4
+-- twolists = list4 ++ list4
 myHead (x:xs) = x 
 -- also e.g. head
 -- myFirstElement = myHead list1
