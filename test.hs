@@ -3,7 +3,15 @@ main = do
     putStrLn "Hello"
     putStrLn "Line 2"
     print list4
-    
+    print ((1,3,5)$+@@@@$(2,4,6))
+    print ((1,3,5)`addV`(2,4,6))  
+
+type V = (Int, Int, Int)
+
+addV :: V -> V -> V
+addV (x1, y1, z1) (x2, y2, z2) = (x1 + x2, y1 + y2, z1 + z2)
+
+($+@@@@$) = addV
 
 myVariable = 2
 -- putStrLn myVariable
@@ -12,7 +20,7 @@ myVariableA = 2
 -- print myVariable
 -- print myVariable
 myTuplePair = (1, "hello")
-x = 3
+yourx = 3
 y = 4
 myAdd x y = x + y
 -- print myAdd
