@@ -55,7 +55,7 @@ myInc  x=x+1
 myMult4 :: Int -> (Int -> (Int -> (Int -> Int)))
 myMult4 a b c d = a*b*c*d
 
-list5 :: [Int]   -- swap Int for Integer
+list5 :: [Integer]   -- swap Int for Integer
 list5 = [1,2,32378387382732378372323232323]
 
 --     [row1, row2, row3, row4, row5 ] = map createRow (zip [-20,-14..4] [red, blue, blue, green, green])
@@ -99,3 +99,13 @@ instance Rateable Movie where
   rating (Movie "Bladerunner") = SoAwesomeICried
   rating (Movie "Tron") = PrettyCool
   rating _ = Meh
+data Color = Color Double Double Double Double deriving (Show, Eq, Ord, Read)
+data InvaderState = InvaderState { ix :: Double
+                                 , iy :: Double
+                                 , color :: Color
+                                 , killed :: Bool
+                              --   , elapsed :: Time
+                                 } deriving (Read, Show, Eq)
+
+--  getLine >>= (\name -> putStrLn ("Hello " ++ name))
+-- putStr "Hello " >>= (\_ -> putStrLn "World")
