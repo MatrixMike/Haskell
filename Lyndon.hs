@@ -16,12 +16,14 @@ main =
 
 myAdd x y = x + y
 myTuple = (1,"mjh")
-
+{-
 myMult3 :: Int -> (Int -> (Int ->Int))     -- curry  check with hlint
 myMult3 x y z = x*y*z
+-}
 
-
+list1 :: [Integer]
 list1 = [1,2,3]
+
 list2 = 1 : 2 : []
 list3 = "first" : "second" : []
 
@@ -53,8 +55,47 @@ myInc  x=x+1
 myMult4 :: Int -> (Int -> (Int -> (Int -> Int)))
 myMult4 a b c d = a*b*c*d
 
+list5 :: [Int]   -- swap Int for Integer
+list5 = [1,2,32378387382732378372323232323]
+
+--     [row1, row2, row3, row4, row5 ] = map createRow (zip [-20,-14..4] [red, blue, blue, green, green])
+
+data MyBool = MyTrue | MyFalse | MyNotSure
+--data MyNumberList = Nada | SomeNumbers Int MyNumberList
+data MyNullString = Nada | MyString String
+stringy :: MyNullString
+stringy = MyString "Whatever, It's just a string"
+data MyData = SuperGreat deriving (Show)
+{-
+(+) :: Num a => a -> a -> a
+read :: Read a => String -> a
+
+incrementAndshow :: (Num a, Show a) => a -> String
+-}
+data Rating = 
+  SoAwesomeICried |
+  PrettyCool      |
+  Meh             |
+  ForTheLoveOfGodMakeItEnd
+  deriving Show
+
+class Rateable r where
+  rating :: r -> Rating
 
 
+data Beer = Coopers | Fosters | CarltonDraught
+  deriving Show
+
+instance Rateable Beer where
+  rating Coopers = PrettyCool
+  rating Fosters = ForTheLoveOfGodMakeItEnd
+  rating CarltonDraught = Meh
 
 
+data Movie = Movie String
+  deriving Show
 
+instance Rateable Movie where
+  rating (Movie "Bladerunner") = SoAwesomeICried
+  rating (Movie "Tron") = PrettyCool
+  rating _ = Meh
