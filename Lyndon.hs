@@ -20,5 +20,8 @@ f (x:xs) = x
 myLength [] = 0
 mylength (x:xs) = 1 + mylength xs
 
+myFilter f []     = []
+myFilter f (x:xs) = if f x then x : myFilter f xs
+                           else     myFilter f xs
 
 
