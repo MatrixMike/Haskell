@@ -4,7 +4,7 @@
 multiple line comments
 -}
 
-
+import GHC.Generics
 main = 
 --let sq x = x * x
 
@@ -108,4 +108,18 @@ data InvaderState = InvaderState { ix :: Double
                                  } deriving (Read, Show, Eq)
 
 --  getLine >>= (\name -> putStrLn ("Hello " ++ name))
--- putStr "Hello " >>= (\_ -> putStrLn "World")
+--putStr "Hello " >>= (\_ -> putStrLn "World")
+
+initialInvaders :: [InvaderState]
+initialInvaders =  concat [row1, row2, row3, row4, row5]
+  where
+    xposs = [-42, -36 .. 12]
+-- mini mod MikeH
+    [row1, row2, row3, row4, row5 ] = map createRow (zip [-20,-14..4] [red, blue, blue, green, green])
+    -- zip takes two lists and returns a list of corresponding pairs
+    createRow :: (Double, Color) -> [InvaderState]
+    createRow (yy, color) =
+      map (\(x, y) -> InvaderState { ix = x, iy = y, color = color
+                                   , killed = False, elapsed = 0}) invaderPoss
+        where
+          invaderPoss = map (\x -> (x, yy)) xposs

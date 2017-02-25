@@ -32,6 +32,9 @@ myFloat = 1.1  :: Float
 -- myMultiply :: Int -> Int -> Int -> Int
 --myMultiply :: Int -> Int -> (Int -> Int))
 myMultiply x y z = x* y * z
+--	print myMultiply 2 3 4
+
+
 
 list1 :: [Int]   -- type signature
 list1 = [1,2,3,4]
