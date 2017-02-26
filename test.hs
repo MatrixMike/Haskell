@@ -27,7 +27,7 @@ myMultiply x y z = x* y * z
 
 list1 :: [Int]   -- type signature
 list1 = [1,2,3,4]
-list2 = 1: 2 : []
+list2 = [1, 2] 
 list3 = "hello" : "world" : []
 list4 = [1,2,3,4,5,6,7,8,9,0]
 -- twolists = list4 ++ list4
