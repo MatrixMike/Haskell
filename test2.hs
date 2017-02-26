@@ -22,21 +22,25 @@ main = do
     let ans = sqinc 4
     print ans
     printNumbers
-    putStrLn (show (degrees 20))
-    putStrLn (show (inc 10))
+--    putStrLn (show (degrees 20))
+    print (degrees 20)
+--    putStrLn (show (inc 10)) 
+    print (inc 10)
 --putStrLn (show myMap     <finish this Mike
     
  --   print sqinc 4
  --   putStrLn ans
 printNumbers = do
-    putStrLn (show (3+4))
+--    putStrLn (show (3+4))
+
 --    let inc x = x + 1
 --    let sq x = x * x
 --    let sqinc x = inc x * inc x
-    putStrLn ( show ( myMap inc [2,3,4]))
-    putStrLn ( show ( myMap sqinc [2,3,4]))
+--    putStrLn ( show ( myMap inc [2,3,4]))
+
+    putStrLn $ show $ myMap sqinc [2,3,4]    
     putStrLn (show (sqinc 4))
-    putStrLn (show (xposs))
+    print xposs
     putStrLn (show (dposs))
     putStrLn (show (liIonD))
     putStrLn ("LiIon cells")
