@@ -81,19 +81,27 @@ dposs :: [Double]
 dposs = [-42.0, -36.1 .. 10.0]
     -- xposs = [-42, -36 .. 12]
 -- putStrLn (xposs)
+{-
+yposs :: [Int]
+yposs = [-42, -36 .. 12][1,2,3]
+-}
+-- range (0,4) => [0,1,2,3,4] 
+ 
+-- Prelude Data.Array> array ((0,0),(10,12)) [((x,y),x*y) | x<-[0..10], y<-[0..12]]  
 
---yposs :: [Int]
---yposs = [-42, -36 .. 12][1,2,3]
+ arrayMaker :: (Int, Int) -> [[Int]]
+
 liIonD :: [Double]
 liIonD = [3.7, 7.4 .. 30]
 
 liIonI :: [Int]
 liIonI = [37, 74 .. 300]
+{-
+Linc :: Int -> Int
+Linc \x -> x + 1
+-}
 
---Linc :: Int -> Int
---Linc \x -> x + 1
-
--- invaderPoss = map (\x -> (x, yy)) xposs
+--invaderPoss = map (\x -> (x, yy)) xposs
 --[r1,r2,r3] = map (x=x+1) ( zip [1,2,3] ["a","b","c"]  )
 
 -- array2D :: [Int][Int]
