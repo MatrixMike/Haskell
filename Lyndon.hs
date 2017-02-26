@@ -5,10 +5,11 @@ multiple line comments
 -}
 
 import GHC.Generics
-main = 
+import Data.List
+main = putStrLn("Michael" `intersect` "Hewitt")
 --let sq x = x * x
 
-   print  (myAdd 3 4 )
+--print  (myAdd 3 4 )
 --print  f  [2,3,4]   
 --	print myMult 2 3 4
 -- print sq 7
@@ -37,6 +38,11 @@ myFilter f (x:xs) = if f x then x : myFilter f xs
                            
 myTuple1 :: (String, Int)
 myTuple1 = ("The meaning of life", 42)
+
+{-
+list6 :: [myTuple1]
+list6 = (["qwe", 3]:["yui",8])
+-}
 
 myTuple2 :: (Int, String, Int, String)
 myTuple2 = (3,"asd",6,"iuiu")
@@ -109,7 +115,7 @@ data InvaderState = InvaderState { ix :: Double
 
 --  getLine >>= (\name -> putStrLn ("Hello " ++ name))
 --putStr "Hello " >>= (\_ -> putStrLn "World")
-
+{-
 initialInvaders :: [InvaderState]
 initialInvaders =  concat [row1, row2, row3, row4, row5]
   where
@@ -123,3 +129,5 @@ initialInvaders =  concat [row1, row2, row3, row4, row5]
                                    , killed = False, elapsed = 0}) invaderPoss
         where
           invaderPoss = map (\x -> (x, yy)) xposs
+-}
+-- show ("Michael" `intersect` "Hewitt")
