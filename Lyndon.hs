@@ -7,6 +7,8 @@ multiple line comments
 -- import GHC.Generics
 import Data.List
 main = putStrLn("Michael" `intersect` "Hewitt")
+--       putStrLn(myAdd 4 5)
+       
 --let sq x = x * x
 
 --print  (myAdd 3 4 )

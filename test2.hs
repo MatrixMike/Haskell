@@ -93,7 +93,7 @@ yposs = [-42, -36 .. 12][1,2,3]
  
 -- Prelude Data.Array> array ((0,0),(10,12)) [((x,y),x*y) | x<-[0..10], y<-[0..12]]  
 
- arrayMaker :: (Int, Int) -> [[Int]]
+--arrayMaker :: (Int, Int) -> [[Int]]
 
 liIonD :: [Double]
 liIonD = [3.7, 7.4 .. 30]
