@@ -10,3 +10,7 @@
       
     area :: Float -> Float  
     area side = Cuboid.area side side side  
+    
+-- main = putStrLn (
+	Cuboid.area (2.0 3.0 4.0)
+
