@@ -4,7 +4,7 @@
 multiple line comments
 -}
 
-import GHC.Generics
+-- import GHC.Generics
 import Data.List
 main = putStrLn("Michael" `intersect` "Hewitt")
 --let sq x = x * x
@@ -131,3 +131,28 @@ initialInvaders =  concat [row1, row2, row3, row4, row5]
           invaderPoss = map (\x -> (x, yy)) xposs
 -}
 -- show ("Michael" `intersect` "Hewitt")
+a=3.0
+--b=3.0
+c=3.0
+x=1.0
+pythAodd :: (Double -> Double)
+pythAodd a = a
+
+pythBodd1 :: (Double -> Double)
+pythBodd1 x = (((a * a)-1))
+
+--pythBodd :: (Double -> Double)
+--pythBodd b = (pythBodd1 / 2.0)
+
+--pythCodd :: (Int -> Int)
+--pythCodd c = b +1
+
+halve                   :: (Fractional d) => d -> d
+halve x                 =  x * 0.5
+
+listOfLists = [[1,2],[3,4],[5,6]]
+-- [8,9]:listOfLists
+
+numbers = [1,2,3,4]
+-- print (9:numbers)
+
