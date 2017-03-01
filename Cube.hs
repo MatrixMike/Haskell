@@ -4,7 +4,11 @@
     ) where  
       
     import qualified Geometry.Cuboid as Cuboid  
-      
+-- main = do 
+    --putStrLn "Hello"
+    
+    
+         
     volume :: Float -> Float  
     volume side = Cuboid.volume side side side  
       
