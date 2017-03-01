@@ -1,6 +1,8 @@
 import Debug.Trace
 import Data.List
-main =  putStrLn "str1" 
+main =   putStrLn (hanoi 4)
+
+--putStrLn "str1" 
 --bmiTell (90 1.77)
 
 --putStrLn("str1" )
