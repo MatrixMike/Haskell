@@ -6,7 +6,8 @@ multiple line comments
 
 -- import GHC.Generics
 import Data.List
-main = putStrLn("Michael" `intersect` "Hewitt")
+main =  putStrLn("Michael" `intersect` "Hewitt")
+     -- putStrLn((stations1) `intersect` (stations2))
 --       putStrLn(myAdd 4 5)
        
 --let sq x = x * x
@@ -29,6 +30,12 @@ list1 = [1,2,3]
 
 list2 = 1 : 2 : []
 list3 = "first" : "second" : []
+
+stations1 :: [String]
+stations1 = "westona" : "altona " :"footscray" : "newport" :"flinders" : "southern cross" : []
+
+stations2 :: [String]
+stations2 = "flinders" : "footscray" : "yarraville" : "ballarat" : []
 
 f (x:xs) = x
 myLength [] = 0
