@@ -32,10 +32,13 @@ list2 = 1 : 2 : []
 list3 = "first" : "second" : []
 
 stations1 :: [String]
-stations1 = "westona" : "altona " :"footscray" : "newport" :"flinders" : "southern cross" : []
+stations1 = "werribee":"hoppers crossing":"williams landing":"aircraft":"laverton":"altona":"westona" : "altona " :"seaholme":"footscray" : "newport" :"flinders" : "southern cross" :"flinders": []
 
 stations2 :: [String]
-stations2 = "flinders" : "footscray" : "yarraville" : "ballarat" : []
+stations2 =  "ararat" :  "buangor" : "beaufort":"trawalla":"burrumbeet":"cardigan village": "wendouree":"ballarat" :"ballan":"bacchus marsh":"melton":"ravenhall":"sunshine": "footscray" : "southern cross" :  []
+
+stations3 :: [String]
+stations3 =  "williamstown" :"williamstown beach":"north williamstown": "newport": []
 
 f (x:xs) = x
 myLength [] = 0
