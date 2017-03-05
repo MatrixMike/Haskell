@@ -1,12 +1,14 @@
 import Debug.Trace
 import Data.List
-main =   putStrLn (hanoi 4)
-
+main =   do 
+       putStrLn (hanoi 4)
+       
+--rightTriangles
 --putStrLn "str1" 
 --bmiTell (90 1.77)
 
 --putStrLn("str1" )
-
+rightTriangles' = [ (a,b,c) | c <- [1..10], b <- [1..c], a <- [1..b], a^2 + b^2 == c^2, a+b+c == 24] 
 
 factorial :: (Integral a) => a -> a  
 factorial 0 = 1  
@@ -159,3 +161,14 @@ optimalPath roadSystem =
     in  if sum (map snd bestAPath) <= sum (map snd bestBPath)  
             then reverse bestAPath  
             else reverse bestBPath
+
+stations1 :: [String]
+stations1 = "werribee":"hoppers crossing":"williams landing":"aircraft":"laverton":"westona" : "altona " :"seaholme":"newport" :"footscray" : "southern cross" :"flinders": []
+
+stations2 :: [String]
+stations2 =  "ararat" :  "buangor" : "beaufort":"trawalla":"burrumbeet":"cardigan village": "wendouree":"ballarat" :"ballan":"bacchus marsh":"melton":"ravenhall":"sunshine": "footscray" : "southern cross" :  []
+
+stations3 :: [String]
+stations3 =  "williamstown" :"williamstown beach":"north williamstown": "newport": []
+
+allstations = [stations1,stations2,stations3]

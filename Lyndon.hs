@@ -42,6 +42,13 @@ stations3 =  "williamstown" :"williamstown beach":"north williamstown": "newport
 
 allstations = [stations1,stations2,stations3]
 
+quicksort :: (Ord a) => [a] -> [a]  
+quicksort [] = []  
+quicksort (x:xs) =   
+    let smallerSorted = quicksort [a | a <- xs, a <= x]  
+        biggerSorted = quicksort [a | a <- xs, a > x]  
+    in  smallerSorted ++ [x] ++ biggerSorted 
+
 f (x:xs) = x
 myLength [] = 0
 mylength (x:xs) = 1 + mylength xs
