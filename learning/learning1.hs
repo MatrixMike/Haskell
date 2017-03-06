@@ -2,7 +2,9 @@ import Debug.Trace
 import Data.List
 main =   do 
        putStrLn (hanoi 4)
-       
+       putStrLn "spacer\n"
+       putStrLn (hanoi 3)
+              
 --rightTriangles
 --putStrLn "str1" 
 --bmiTell (90 1.77)
@@ -160,7 +162,7 @@ optimalPath roadSystem =
     let (bestAPath, bestBPath) = foldl roadStep ([],[]) roadSystem  
     in  if sum (map snd bestAPath) <= sum (map snd bestBPath)  
             then reverse bestAPath  
-            else reverse bestBPath
+            else reverse bestBPath --see comment from hlint on laziness
 
 stations1 :: [String]
 stations1 = "werribee":"hoppers crossing":"williams landing":"aircraft":"laverton":"westona" : "altona " :"seaholme":"newport" :"footscray" : "southern cross" :"flinders": []

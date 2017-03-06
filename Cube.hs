@@ -4,8 +4,9 @@
     ) where  
       
     import qualified Geometry.Cuboid as Cuboid  
--- main = do 
-    --putStrLn "Hello"
+main = do 
+     --Cuboid.area (2.0 3.0 4.0)
+     putStrLn "Hello"
     
     
          
