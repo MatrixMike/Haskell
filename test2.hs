@@ -32,20 +32,21 @@ main
 --    putStrLn (show (inc 10)) 
 --putStrLn (show myMap     <finish this Mike
 printNumbers = do
-  putStrLn $ show $ myMap sqinc [2, 3, 4]
-  putStrLn (show (sqinc 4))
+  print (myMap sqinc [2, 3, 4])
+  print (sqinc 4)
   print xposs
   putStrLn (show (dposs))
   putStrLn (show (liIonD))
   putStrLn ("LiIon cells")
   putStrLn (show (liIonI))
   putStrLn (show (37 / 10))
-  putStrLn ("Now some lambda work..")
+  putStrLn "Now some lambda work.."
   putStrLn (show (map (\x -> x + 1) [7,5 .. -6])) -- lambda
   putStrLn (show (zip [1, 2, 3] [6, 7, 8, 9]))
  --   putStrLn ( show (zip [1,2,3] ["a","b" ..  "f"]))
   putStrLn (show (zip [1, 2, 3] ["a", "b", "f"]))
 
+--putStrLn $ show $ myMap sqinc [2, 3, 4]
 --    putStrLn (show (3+4))
 --    let inc x = x + 1
 --    let sq x = x * x
