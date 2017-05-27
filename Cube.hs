@@ -4,10 +4,12 @@
     ) where  
       
     import qualified Geometry.Cuboid as Cuboid  
-main = do 
+{-main = do {
      --Cuboid.area (2.0 3.0 4.0)
      putStrLn "Hello"
-    
+     }
+-}
+  
     
          
     volume :: Float -> Float  
