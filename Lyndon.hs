@@ -28,17 +28,17 @@ myMult3 x y z = x*y*z
 list1 :: [Integer]
 list1 = [1,2,3]
 
-list2 = 1 : 2 : []
-list3 = "first" : "second" : []
+list2 = [1,2]    --  was1 : 2 : []
+list3 = ["first" , "second"] --  : []
 
 stations1 :: [String]
-stations1 = "werribee":"hoppers crossing":"williams landing":"aircraft":"laverton":"altona":"westona" : "altona " :"seaholme":"newport" :"footscray" : "flinders" : "southern cross" :"flinders": []
+stations1 = ["werribee","hoppers crossing","williams landing","aircraft","laverton","altona","westona" , "altona " ,"seaholme","newport" ,"footscray" , "flinders" , "southern cross" ,"flinders"]
 
 stations2 :: [String]
-stations2 =  "ararat" :  "buangor" : "beaufort":"trawalla":"burrumbeet":"cardigan village": "wendouree":"ballarat" :"ballan":"bacchus marsh":"melton":"ravenhall":"sunshine": "footscray" : "southern cross" :  []
+stations2 =  ["ararat" ,  "buangor" , "beaufort","trawalla","burrumbeet","cardigan village", "wendouree","ballarat" ,"ballan","bacchus marsh","melton","ravenhall","sunshine", "footscray" , "southern cross"]
 
 stations3 :: [String]
-stations3 =  "williamstown" :"williamstown beach":"north williamstown": "newport": []
+stations3 =  ["williamstown" ,"williamstown beach","north williamstown", "newport" ]
 
 allstations = [stations1,stations2,stations3]
 
@@ -79,7 +79,7 @@ myFloat = 1.1
 myInc :: Int -> Int
 myInc  x=x+1
 
-myMult4 :: Int -> (Int -> (Int -> (Int -> Int)))
+myMult4 ::    Int -> Int -> Int -> Int -> Int   --Int -> (Int -> (Int -> (Int -> Int)))
 myMult4 a b c d = a*b*c*d
 
 list5 :: [Integer]   -- swap Int for Integer
@@ -160,7 +160,7 @@ pythAodd :: (Double -> Double)
 pythAodd a = a
 
 pythBodd1 :: (Double -> Double)
-pythBodd1 x = (((a * a)-1))
+pythBodd1 x = (a * a)-1
 
 --pythBodd :: (Double -> Double)
 --pythBodd b = (pythBodd1 / 2.0)
