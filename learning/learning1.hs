@@ -110,11 +110,11 @@ hanoi n a b c = hanoi (n-1) a c b ++ [(a,c)] ++ hanoi (n-1) b a c
 applyMoves ((from,to):nextMoves) pegs | trace ("(from:" ++ show from ++ ", to:" ++ show to ++ ") pegs:" ++ show pegs) False = undefined
 applyMoves [] pegs = pegs
 applyMoves ((1,2):nextMoves) pegs = applyMoves nextMoves [tail (head pegs),         head (head pegs):pegs!!1, pegs!!2]
-applyMoves ((1,3):nextMoves) pegs = applyMoves nextMoves [tail (pegs!!0),         pegs!!1,                head (pegs!!0):pegs!!2]
-applyMoves ((2,1):nextMoves) pegs = applyMoves nextMoves [head (pegs!!1):pegs!!0, tail (pegs!!1),         pegs!!2]
-applyMoves ((2,3):nextMoves) pegs = applyMoves nextMoves [pegs!!0,                tail (pegs!!1),         head (pegs!!1):pegs!!2]
-applyMoves ((3,1):nextMoves) pegs = applyMoves nextMoves [head (pegs!!2):pegs!!0, pegs!!1,                tail (pegs!!2)]
-applyMoves ((3,2):nextMoves) pegs = applyMoves nextMoves [pegs!!0,                head (pegs!!2):pegs!!1, tail (pegs!!2)]
+applyMoves ((1,3):nextMoves) pegs = applyMoves nextMoves [tail (head pegs),         pegs!!1,                head (head pegs):pegs!!2]
+applyMoves ((2,1):nextMoves) pegs = applyMoves nextMoves [head (pegs!!1):head pegs, tail (pegs!!1),         pegs!!2]
+applyMoves ((2,3):nextMoves) pegs = applyMoves nextMoves [head pegs,                tail (pegs!!1),         head (pegs!!1):pegs!!2]
+applyMoves ((3,1):nextMoves) pegs = applyMoves nextMoves [head (pegs!!2):head pegs, pegs!!1,                tail (pegs!!2)]
+applyMoves ((3,2):nextMoves) pegs = applyMoves nextMoves [head pegs,                head (pegs!!2):pegs!!1, tail (pegs!!2)]
 applyMoves (dodgyMove:nextMoves) pegs = error "Invalid moves: "
 
 
