@@ -5,6 +5,6 @@ main = do
   args <- getArgs
   progName <- getProgName
   putStrLn "The arguments are:"
-  mapM putStrLn args
+  mapM_ putStrLn args
   putStrLn "The program name is:"
   putStrLn progName
