@@ -1,3 +1,4 @@
-main = do   putStr "Hey, "  
-            putStr "I'm "  
-            putStrLn "Andy!"  
+main = do
+  putStr "Hey, "
+  putStr "I'm "
+  putStrLn "Andy!"
