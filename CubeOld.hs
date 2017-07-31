@@ -1,4 +1,4 @@
-git     module Geometry.Cube  
+    module Geometry.Cube  
     ( volume  
     , area  
     ) where  
