@@ -1,4 +1,6 @@
 -- usage is ...
+import Reversew
+
 main = do
   line <- getLine
   if null line
@@ -6,6 +8,7 @@ main = do
     else do
       putStrLn $ reverseWords line
       main
-
+{-
 reverseWords :: String -> String
 reverseWords = unwords . map reverse . words
+-}
