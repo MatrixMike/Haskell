@@ -11,3 +11,4 @@
              return colour)
       putStrLn "The colours that you associate with 1, 2, 3 and 4 are: "
       mapM putStrLn colours
+      
