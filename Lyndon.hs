@@ -7,7 +7,7 @@ multiple line comments
 -- import GHC.Generics
 import Data.List
 main =  putStrLn("Michael" `intersect` "Hewitt")
-     -- putStrLn((stations1) `intersect` (stations2))
+--      putStrLn([stations1 intersect stations2])
 --       putStrLn(myAdd 4 5)
        
 --let sq x = x * x
@@ -151,7 +151,7 @@ initialInvaders =  concat [row1, row2, row3, row4, row5]
         where
           invaderPoss = map (\x -> (x, yy)) xposs
 -}
--- show ("Michael" `intersect` "Hewitt")
+--    show ("Michael" `intersect` "Hewitt")
 a=3.0
 --b=3.0
 c=3.0

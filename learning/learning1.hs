@@ -4,6 +4,7 @@ main =   do
        putStrLn (hanoi 4)
        putStrLn "spacer\n"
        putStrLn (hanoi 3)
+       putStrLn ("abcdefg" `intersect` "mhjngdopiu")
               
 --rightTriangles
 --putStrLn "str1" 
