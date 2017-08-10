@@ -5,3 +5,13 @@ import qualified Example
 
 main :: IO ()
 main = Example.main
+
+
+import Data.List
+
+main =   do 
+       putStrLn (hanoi 4)
+       putStrLn "spacer\n"
+       putStrLn (hanoi 3)
+       putStrLn ("abcdefg" `intersect` "mhjngdopiu")
+       
