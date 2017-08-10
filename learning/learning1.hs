@@ -1,20 +1,20 @@
 import Data.List
-<<<<<<< HEAD
+
 main =   do 
        putStrLn (hanoi 4)
        putStrLn "spacer\n"
        putStrLn (hanoi 3)
        putStrLn ("abcdefg" `intersect` "mhjngdopiu")
               
-=======
-import Debug.Trace
 
-main = do
+--import Debug.Trace
+
+{-main = do
   putStrLn (hanoi 4)
   putStrLn "spacer\n"
   putStrLn (hanoi 3)
+-}
 
->>>>>>> b1dd35e882347edfded8fdbe5e520caa65523ab7
 --rightTriangles
 --putStrLn "str1" 
 --bmiTell (90 1.77)
@@ -141,8 +141,9 @@ oddSquareSum =
 hanoi 0 _ _ _ = []
 hanoi n a b c = hanoi (n-1) a c b ++ [(a,c)] ++ hanoi (n-1) b a c
 -}
+{-
 applyMoves ((from, to):nextMoves) pegs
-  | trace
+--  | trace
      ("(from:" ++ show from ++ ", to:" ++ show to ++ ") pegs:" ++ show pegs)
      False = undefined
 applyMoves [] pegs = pegs
@@ -171,7 +172,7 @@ applyMoves ((3, 2):nextMoves) pegs =
     nextMoves
     [head pegs, head (pegs !! 2) : pegs !! 1, tail (pegs !! 2)]
 applyMoves (dodgyMove:nextMoves) pegs = error "Invalid moves: "
-
+-}
 hanoi :: Int -> String
 hanoi n
   | n < 1 = "No moves required to shift zero or negative number of disks\n"
