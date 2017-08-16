@@ -1,4 +1,7 @@
-main = do
+--import Control.Monad
+--import Data.Char
+
+    main = do
 --  print (map (++ "*") (map (++ "!") ["hey", "ho", "woo"]))
     print  ["one", "two","three","four"]
     let ll = ["aa","bb"]
@@ -13,3 +16,5 @@ main = do
     print ( ["one", "two","three","four"] ++ ["y"])   
     let y = "why" 
     print ( ["one", "two","three","four"] ++ [y] ++ ll)    
+--    putStrLn $ map toUpper ll
+--    print (map toUpper ["one", "two","three","four"]))
