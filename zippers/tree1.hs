@@ -1,8 +1,6 @@
-{-
-http://learnyouahaskell.com/zippers
-created so that I can access from ghci with 
- :l ~/Haskell/zippers/tree1.hs 
--}
+module Tree1 ()
+    where
+    
 data Tree a
   = Empty
   | Node a
@@ -71,4 +69,9 @@ type Zipper a = (Tree a, Breadcrumbs a)
 modify :: (a -> a) -> Zipper a -> Zipper a
 modify f (Node x l r, bs) = (Node (f x) l r, bs)
 modify f (Empty, bs) = (Empty, bs)
---main = 
+
+{-
+http://learnyouahaskell.com/zippers
+created so that I can access from ghci with 
+ :l ~/Haskell/zippers/tree1.hs 
+-}
