@@ -7,8 +7,8 @@
           (\a -> do
              putStrLn $
                "Which colour do you associate with the number " ++ show a ++ "?"
-             colour <- getLine
-             return colour)
+             getLine)
       putStrLn "The colours that you associate with 1, 2, 3 and 4 are: "
       mapM putStrLn colours
+      
       
