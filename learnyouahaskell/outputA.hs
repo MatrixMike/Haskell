@@ -5,6 +5,8 @@ import System.IO
 
 {-
 ./outputA view haiku.txt
+https://downloads.haskell.org/~ghc/6.12.2/docs/html/libraries/containers-0.3.0.0/Data-Map.html
+https://hackage.haskell.org/package/base-4.10.0.0/docs/Data-List.html
 -}
 dispatch :: [(String, [String] -> IO ())]
 dispatch = [("add", add), ("view", view), ("remove", remove)]
