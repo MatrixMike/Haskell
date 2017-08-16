@@ -1,6 +1,7 @@
 main = do
 --  print (map (++ "*") (map (++ "!") ["hey", "ho", "woo"]))
     print  ["one", "two","three","four"]
+    let ll = ["aa","bb"]
     print (head ["one", "two","three","four"])
     print (last ["one", "two","three","four"])
     print (tail ["one", "two","three","four"])
@@ -11,4 +12,4 @@ main = do
     print ( ["one", "two","three","four"] ++ ["x","y"])
     print ( ["one", "two","three","four"] ++ ["y"])   
     let y = "why" 
-    print ( ["one", "two","three","four"] ++ [y])    
+    print ( ["one", "two","three","four"] ++ [y] ++ ll)    
