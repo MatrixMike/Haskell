@@ -1,1 +1,1 @@
-main = print (map (++ "!") ["hey", "ho", "woo"])
+main = print (map (++ "*") (map (++ "!") ["hey", "ho", "woo"]))
