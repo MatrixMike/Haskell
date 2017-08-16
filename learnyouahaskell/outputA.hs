@@ -8,7 +8,11 @@ import System.IO
 -}
 dispatch :: [(String, [String] -> IO ())]
 dispatch = [("add", add), ("view", view), ("remove", remove)]
-
+{- 16.08.2017 21:17:10
+usage :   (action>    <filename>  <data to add>
+ e.g. view filename
+ e.g. remove filename <linenumber - 1>
+-}
 main = do
   (command:args) <- getArgs
   let (Just action) = lookup command dispatch
