@@ -9,5 +9,6 @@ main = do
     print (null ["one", "two","three","four"])
 --    print (uncons ["one", "two","three","four"])
     print ( ["one", "two","three","four"] ++ ["x","y"])
-    
-    
+    print ( ["one", "two","three","four"] ++ ["y"])   
+    let y = "why" 
+    print ( ["one", "two","three","four"] ++ [y])    
