@@ -19,3 +19,4 @@ main = do
     print ( ["one", "two","three","four"] ++ [y] ++ ll)    
 --    putStrLn $ map toUpper ll
     print (map  (toUpper) (head["one", "two","three","four"]))
+--    print (map  (toUpper) ["one", "two","three","four"])
