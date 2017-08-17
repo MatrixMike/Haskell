@@ -1,6 +1,6 @@
 import Control.Monad
 import Data.Char
-
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 main = do
     print (map (++ "*") (map (++ "!") ["hey", "ho", "woo"]))
     let lfour =   ["one", "two","three","four"]

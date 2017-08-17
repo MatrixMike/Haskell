@@ -1,6 +1,6 @@
-    import Control.Monad
-    
-    main = do
+import Control.Monad
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}    
+main = do
       colours <-
         forM
           [1, 2, 3, 4]

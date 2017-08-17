@@ -1,6 +1,6 @@
     import Control.Monad
     import Data.Char
-    
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}    
     main =
       forever $ do
         putStr "Give me some input: "

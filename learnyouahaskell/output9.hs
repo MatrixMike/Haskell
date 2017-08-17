@@ -1,5 +1,7 @@
-    import Control.Monad  
-    import Data.Char  
+import Control.Monad  
+import Data.Char 
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
+    
 {-
 when testing this - reading data from terminal 
 use ctrl-D as end-of-data and notice 'clean response'

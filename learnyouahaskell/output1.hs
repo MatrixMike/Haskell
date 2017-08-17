@@ -1,3 +1,6 @@
+
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
+main :: IO()
 main = do
   putStrLn "Hello, what's your name?"
   -- The var <- action assigns a value that is produced by an action 
