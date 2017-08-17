@@ -1,4 +1,5 @@
 -- usage is ...
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Reversew
 
 main = do
