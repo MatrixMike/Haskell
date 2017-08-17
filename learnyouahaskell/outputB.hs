@@ -18,4 +18,4 @@ main = do
     let y = "why" 
     print ( ["one", "two","three","four"] ++ [y] ++ ll)    
 --    putStrLn $ map toUpper ll
-    print (map  toUpper (head["one", "two","three","four"]))
+    print (map  (toUpper) (head["one", "two","three","four"]))
