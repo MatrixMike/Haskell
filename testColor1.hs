@@ -1,5 +1,8 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
+main :: IO()
 main = print (myAdd 4 3)
 
+{-myAdd :: forall a Num a => a -> a -> a   added after suggestion from OPTIONS -}
 myAdd x y = x + y
 
 {-| A bright red Colour. -}
