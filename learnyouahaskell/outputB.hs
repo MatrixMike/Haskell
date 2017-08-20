@@ -1,6 +1,7 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Control.Monad
 import Data.Char
-{-# OPTIONS_GHC -fwarn-missing-signatures #-}
+
 main = do
     print (map (++ "*") (map (++ "!") ["hey", "ho", "woo"]))
     let lfour =   ["one", "two","three","four"]
@@ -20,3 +21,4 @@ main = do
 --    putStrLn $ map toUpper ll
     print (map  (toUpper) (head["one", "two","three","four"]))
 --    print (map  (toUpper) ["one", "two","three","four"])
+    print (map  toUpper (head (tail["one", "two","three","four"])))
