@@ -20,6 +20,17 @@ myAdd x y = x + y
 
 myTuple = (1, "mjh")
 
+sunny = True
+{-    if sunny 
+    then 1 
+    else 0 
+    
+kindOfBagRequired = 
+    case xx
+    0 -> "satchel"
+    1 -> "bag"
+ -}       
+
 {-
 myMult3 :: Int -> (Int -> (Int ->Int))     -- curry  check with hlint
 myMult3 x y z = x*y*z

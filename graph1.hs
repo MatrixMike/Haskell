@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Data.Graph
 
 graph = buildG (1, 6) [(1, 2), (1, 3), (2, 4), (5, 6)]

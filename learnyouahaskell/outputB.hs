@@ -4,6 +4,7 @@ import Data.Char
 
 main = do
     print (map (++ "*") (map (++ "!") ["hey", "ho", "woo"]))
+    print (map ((++ "*") . (++ "!")) ["hey", "ho", "woo"])   
     let lfour =   ["one", "two","three","four"]
     print lfour
     let ll = ["aa","bb"]
