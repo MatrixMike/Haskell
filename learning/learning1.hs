@@ -165,7 +165,7 @@ optimalPath roadSystem =
             else reverse bestBPath --see comment from hlint on laziness
 
 stations1 :: [String]
-stations1 = "werribee":"hoppers crossing":"williams landing":"aircraft":"laverton":"westona" : "altona " :"seaholme":"newport" :"footscray" : "southern cross" :"flinders": []
+stations1 = ["werribee" ,"hoppers crossing" ,"williams landing" ,"aircraft" ,"laverton" ,"westona" ,"altona " ,"seaholme" ,"newport" ,"footscray" , "southern cross" ,"flinders"]
 
 stations2 :: [String]
 stations2 =  "ararat" :  "buangor" : "beaufort":"trawalla":"burrumbeet":"cardigan village": "wendouree":"ballarat" :"ballan":"bacchus marsh":"melton":"ravenhall":"sunshine": "footscray" : "southern cross" :  []
