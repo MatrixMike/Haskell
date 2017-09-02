@@ -1,8 +1,16 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
+{-
+ngon takes Int and Double and returns something of type Shape.
+internally, ngon maps two functions onto a range from 0 to n-1 
+producing a list of co-ordinates of the vertices of a polygon
+- clever use of lambda - value i used for X and Y
+
+-}
 main :: IO()
 main = do
 --    print  4 
     print $ poly
+    print pth
     
 poly :: Shape
 poly = ngon 6 2.0
@@ -25,4 +33,6 @@ data Shape = PolygonShapeX Path |
 {-| A data type made up a collection of points that form a path when joined. -}
 type Path = [(Double, Double)]
 
+pth :: Path
+pth = [(1.1,2.2)]
 
