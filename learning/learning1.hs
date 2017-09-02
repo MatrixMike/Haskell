@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Data.List
 
 main =   do 
@@ -5,7 +6,7 @@ main =   do
        putStrLn "spacer\n"
        putStrLn (hanoi 3)
        putStrLn ("abcdefg" `intersect` "mhjngdopiu")
-              
+       putStrLn (head stations1 `intersect` head stations3)              
 
 --import Debug.Trace
 

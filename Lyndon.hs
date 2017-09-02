@@ -4,16 +4,12 @@
 multiple line comments
 -}
 -- import GHC.Generics
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Data.List
-<<<<<<< HEAD
+
 main =  putStrLn("Michael" `intersect` "Hewitt")
 --      putStrLn([stations1 intersect stations2])
-=======
 
-main = putStrLn ("Michael" `intersect` "Hewitt")
-     -- putStrLn((stations1) `intersect` (stations2))
-
->>>>>>> b1dd35e882347edfded8fdbe5e520caa65523ab7
 --       putStrLn(myAdd 4 5)
 --let sq x = x * x
 --print  (myAdd 3 4 )
@@ -23,6 +19,17 @@ main = putStrLn ("Michael" `intersect` "Hewitt")
 myAdd x y = x + y
 
 myTuple = (1, "mjh")
+
+sunny = True
+{-    if sunny 
+    then 1 
+    else 0 
+    
+kindOfBagRequired = 
+    case xx
+    0 -> "satchel"
+    1 -> "bag"
+ -}       
 
 {-
 myMult3 :: Int -> (Int -> (Int ->Int))     -- curry  check with hlint
@@ -210,14 +217,13 @@ initialInvaders =  concat [row1, row2, row3, row4, row5]
         where
           invaderPoss = map (\x -> (x, yy)) xposs
 -}
-<<<<<<< HEAD
+
 --    show ("Michael" `intersect` "Hewitt")
-a=3.0
-=======
+
 -- show ("Michael" `intersect` "Hewitt")
 a = 3.0
 
->>>>>>> b1dd35e882347edfded8fdbe5e520caa65523ab7
+
 --b=3.0
 c = 3.0
 

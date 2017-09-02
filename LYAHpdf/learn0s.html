@@ -1,0 +1,135 @@
+<!DOCTYPE html><html>
+<head>
+<title></title>
+<style type="text/css">
+<!--
+.xflip {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: fliph;
+}
+.yflip {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: flipv;
+}
+.xyflip {
+    -moz-transform: scaleX(-1) scaleY(-1);
+    -webkit-transform: scaleX(-1) scaleY(-1);
+    -o-transform: scaleX(-1) scaleY(-1);
+    transform: scaleX(-1) scaleY(-1);
+    filter: fliph + flipv;
+}
+-->
+</style>
+</head>
+<body>
+<a name=1></a><img src="learn0-1_1.png"/><br/>
+<img src="learn0-1_2.png"/><br/>
+Introduction&#160;-&#160;Learn&#160;You&#160;a&#160;Haskell for&#160;Great&#160;Good!<br/>
+http://learnyouahaskell.com/introduction<br/>
+Table of&#160;contents<br/>
+Starting Out<br/>
+Introduction<br/>
+<b>About this tutorial</b><br/>
+Welcome&#160;to&#160;<b>Learn&#160;You&#160;a Haskell&#160;for Great Good</b>!&#160;If&#160;you're reading&#160;this,&#160;chances are&#160;you&#160;want&#160;to&#160;learn&#160;Haskell.&#160;Well,&#160;you've<br/>
+come&#160;to&#160;the&#160;right place,&#160;but&#160;let's&#160;talk&#160;about&#160;this&#160;tutorial&#160;a bit&#160;first.<br/>
+I&#160;decided&#160;to&#160;write&#160;this&#160;because&#160;I&#160;wanted&#160;to solidify my own&#160;knowledge of&#160;Haskell and&#160;because&#160;I thought&#160;I&#160;could help&#160;people&#160;new<br/>
+to&#160;Haskell&#160;learn&#160;it&#160;from&#160;my&#160;perspective. There are&#160;quite&#160;a&#160;few tutorials&#160;on&#160;Haskell floating&#160;around&#160;on&#160;the&#160;internet.&#160;When I&#160;was<br/>
+starting out in&#160;Haskell,&#160;I&#160;didn't&#160;learn from&#160;just&#160;one resource. The way&#160;I&#160;learned it&#160;was&#160;by&#160;reading several&#160;different&#160;tutorials&#160;and<br/>
+articles because&#160;each&#160;explained something in&#160;a different&#160;way than&#160;the&#160;other did.&#160;By&#160;going&#160;through several resources, I&#160;was&#160;able<br/>
+put&#160;together the&#160;pieces and it&#160;all just&#160;came&#160;falling&#160;into&#160;place.&#160;So&#160;this is an attempt&#160;at&#160;adding another&#160;useful resource&#160;for learning<br/>
+Haskell so&#160;you&#160;have&#160;a&#160;bigger chance of&#160;finding one you like.<br/>
+This tutorial is aimed at people who&#160;have&#160;experience&#160;in&#160;imperative&#160;programming<br/>
+languages (C,&#160;C++,&#160;Java,&#160;Python&#160;…) but haven't&#160;programmed&#160;in&#160;a&#160;functional language<br/>
+before (Haskell,&#160;ML,&#160;OCaml&#160;…).&#160;Although&#160;I&#160;bet&#160;that&#160;even&#160;if you don't&#160;have any significant<br/>
+programming&#160;experience,&#160;a&#160;smart&#160;person such&#160;as&#160;yourself will be&#160;able&#160;to&#160;follow&#160;along<br/>
+and&#160;learn Haskell.<br/>
+The&#160;channel #haskell on the freenode network is a&#160;great&#160;place to&#160;ask questions&#160;if&#160;you're<br/>
+feeling&#160;stuck.&#160;People there&#160;are extremely&#160;nice, patient&#160;and understanding&#160;to newbies.<br/>
+I&#160;failed&#160;to&#160;learn&#160;Haskell approximately&#160;2&#160;times&#160;before finally grasping&#160;it&#160;because&#160;it&#160;all just&#160;seemed&#160;too&#160;weird&#160;to&#160;me&#160;and&#160;I&#160;didn't&#160;get<br/>
+it.&#160;But&#160;then&#160;once&#160;it&#160;just&#160;&#34;clicked&#34; and after&#160;getting&#160;over that&#160;initial hurdle,&#160;it&#160;was&#160;pretty much&#160;smooth&#160;sailing.&#160;I&#160;guess what&#160;I'm trying<br/>
+to&#160;say&#160;is:&#160;Haskell&#160;is&#160;great&#160;and&#160;if&#160;you're&#160;interested&#160;in programming you&#160;should&#160;really learn&#160;it&#160;even if&#160;it&#160;seems&#160;weird at first. Learning<br/>
+Haskell is much&#160;like&#160;learning&#160;to&#160;program for the first&#160;time —&#160;it's&#160;fun! It&#160;forces&#160;you&#160;to&#160;think&#160;differently,&#160;which&#160;brings us&#160;to&#160;the next<br/>
+section&#160;…<br/>
+<b>So&#160;what's&#160;Haskell?</b><br/>
+Haskell is a&#160;<b>purely functional&#160;programming language</b>.&#160;In&#160;imperative languages&#160;you get&#160;things<br/>
+done by&#160;giving&#160;the computer a&#160;sequence&#160;of&#160;tasks&#160;and&#160;then it&#160;executes&#160;them.&#160;While&#160;executing them,&#160;it<br/>
+can&#160;change state.&#160;For instance,&#160;you&#160;set&#160;variable&#160;&#160;<b>a&#160;</b>&#160;to&#160;5 and then&#160;do&#160;some&#160;stuff&#160;and&#160;then&#160;set&#160;it&#160;to<br/>
+something&#160;else.&#160;You&#160;have&#160;control&#160;flow&#160;structures for&#160;doing&#160;some action several&#160;times.&#160;In purely<br/>
+functional programming you don't&#160;tell the&#160;computer&#160;what&#160;to&#160;do as such&#160;but&#160;rather you&#160;tell it&#160;what&#160;stuff<br/>
+<i>is</i>.&#160;The&#160;factorial&#160;of&#160;a number is the product&#160;of&#160;all the&#160;numbers from&#160;1 to&#160;that&#160;number,&#160;the&#160;sum of&#160;a&#160;list<br/>
+of&#160;numbers&#160;is&#160;the&#160;first&#160;number plus&#160;the&#160;sum of&#160;all the other&#160;numbers,&#160;and&#160;so on.&#160;You express that&#160;in<br/>
+the form&#160;of&#160;functions.&#160;You&#160;also can't&#160;set&#160;a&#160;variable&#160;to&#160;something&#160;and&#160;then&#160;set&#160;it&#160;to something else&#160;later.&#160;If&#160;you&#160;say&#160;that&#160;&#160;<b>a&#160;</b>&#160;is 5,&#160;you<br/>
+can't&#160;say it's something else&#160;later because&#160;you&#160;just&#160;said&#160;it&#160;was 5. What&#160;are&#160;you,&#160;some&#160;kind of&#160;liar?&#160;So&#160;in purely functional<br/>
+languages,&#160;a&#160;function has no&#160;side-effects.&#160;The&#160;only thing a&#160;function&#160;can&#160;do&#160;is&#160;calculate something and&#160;return it&#160;as a&#160;result.&#160;At<br/>
+first,&#160;this&#160;seems kind&#160;of&#160;limiting&#160;but&#160;it&#160;actually has some&#160;very&#160;nice consequences:&#160;if&#160;a&#160;function&#160;is&#160;called&#160;twice&#160;with the same<br/>
+1 of 3<br/>
+01/03/17 09:12<br/>
+<hr/>
+<a name=2></a><img src="learn0-2_1.png"/><br/>
+<img src="learn0-2_2.png"/><br/>
+Introduction&#160;-&#160;Learn&#160;You&#160;a&#160;Haskell for&#160;Great&#160;Good!<br/>
+http://learnyouahaskell.com/introduction<br/>
+parameters,&#160;it's guaranteed to&#160;return the&#160;same result.&#160;That's called referential transparency and&#160;not&#160;only does it&#160;allow the<br/>
+compiler to&#160;reason&#160;about&#160;the&#160;program's behavior,&#160;but&#160;it&#160;also allows you&#160;to&#160;easily&#160;deduce (and&#160;even&#160;prove)&#160;that&#160;a&#160;function&#160;is<br/>
+correct&#160;and&#160;then build more&#160;complex&#160;functions&#160;by gluing&#160;simple functions&#160;together.<br/>
+Haskell is&#160;<b>lazy</b>.&#160;That&#160;means that&#160;unless specifically told&#160;otherwise,&#160;Haskell won't<br/>
+execute&#160;functions and calculate things until&#160;it's&#160;really forced to show&#160;you&#160;a result.&#160;That<br/>
+goes well with&#160;referential transparency&#160;and&#160;it&#160;allows&#160;you&#160;to&#160;think&#160;of&#160;programs as&#160;a<br/>
+series of&#160;<b>transformations&#160;on&#160;data</b>.&#160;It&#160;also&#160;allows cool&#160;things&#160;such as infinite&#160;data<br/>
+structures.&#160;Say&#160;you&#160;have&#160;an immutable&#160;list&#160;of&#160;numbers&#160;&#160;<b>xs = [1,2,3,4,5,6,7,8]</b><br/>
+and&#160;a&#160;function&#160;&#160;<b>doubleMe&#160;</b>&#160;which multiplies&#160;every element&#160;by&#160;2&#160;and&#160;then&#160;returns&#160;a&#160;new<br/>
+list. If&#160;we&#160;wanted to multiply our&#160;list&#160;by 8&#160;in&#160;an&#160;imperative&#160;language and did<br/>
+<b>doubleMe(doubleMe(doubleMe(xs)))&#160;</b>,&#160;it&#160;would&#160;probably pass through&#160;the&#160;list<br/>
+once&#160;and&#160;make&#160;a copy and then&#160;return&#160;it. Then&#160;it&#160;would pass through&#160;the&#160;list&#160;another<br/>
+two&#160;times and&#160;return&#160;the result.&#160;In a&#160;lazy language,&#160;calling&#160;&#160;<b>doubleMe&#160;</b>&#160;on a&#160;list&#160;without&#160;forcing&#160;it&#160;to show&#160;you&#160;the&#160;result&#160;ends up in<br/>
+the program&#160;sort&#160;of telling&#160;you &#34;Yeah&#160;yeah,&#160;I'll&#160;do&#160;it&#160;later!&#34;.&#160;But&#160;once&#160;you&#160;want&#160;to&#160;see&#160;the&#160;result,&#160;the first&#160;&#160;<b>doubleMe&#160;</b>&#160;tells&#160;the<br/>
+second one it&#160;wants&#160;the&#160;result,&#160;now!&#160;The&#160;second&#160;one&#160;says&#160;that to&#160;the&#160;third one and the&#160;third one reluctantly gives&#160;back&#160;a doubled<br/>
+1,&#160;which&#160;is a&#160;2.&#160;The&#160;second&#160;one&#160;receives that&#160;and gives&#160;back 4&#160;to the first&#160;one.&#160;The&#160;first&#160;one&#160;sees that&#160;and&#160;tells you&#160;the first<br/>
+element&#160;is&#160;8.&#160;So&#160;it only&#160;does&#160;one&#160;pass&#160;through the&#160;list&#160;and&#160;only when&#160;you&#160;really need it.&#160;That&#160;way when&#160;you want&#160;something from<br/>
+a&#160;lazy&#160;language you&#160;can&#160;just&#160;take&#160;some initial&#160;data and efficiently transform and mend&#160;it&#160;so it&#160;resembles&#160;what&#160;you&#160;want&#160;at&#160;the<br/>
+end.<br/>
+Haskell is&#160;<b>statically typed</b>.&#160;When&#160;you&#160;compile your program,&#160;the&#160;compiler knows&#160;which&#160;piece of<br/>
+code&#160;is a&#160;number,&#160;which&#160;is&#160;a string&#160;and&#160;so&#160;on.&#160;That&#160;means that&#160;a lot&#160;of&#160;possible errors are&#160;caught&#160;at<br/>
+compile&#160;time.&#160;If&#160;you&#160;try to add&#160;together&#160;a number&#160;and&#160;a&#160;string, the&#160;compiler will&#160;whine&#160;at&#160;you.<br/>
+Haskell uses a&#160;very good&#160;type&#160;system&#160;that has&#160;<b>type&#160;inference</b>.&#160;That&#160;means that&#160;you&#160;don't&#160;have&#160;to<br/>
+explicitly label&#160;every piece&#160;of&#160;code&#160;with&#160;a&#160;type&#160;because&#160;the&#160;type&#160;system&#160;can&#160;intelligently&#160;figure&#160;out&#160;a<br/>
+lot&#160;about&#160;it.&#160;If&#160;you say&#160;&#160;<b>a = 5 + 4&#160;</b>,&#160;you&#160;don't&#160;have&#160;to&#160;tell Haskell&#160;that&#160;&#160;<b>a&#160;</b>&#160;is a&#160;number,&#160;it&#160;can figure<br/>
+that&#160;out&#160;by&#160;itself.&#160;Type&#160;inference&#160;also&#160;allows&#160;your code&#160;to be&#160;more general. If&#160;a function&#160;you&#160;make<br/>
+takes two&#160;parameters&#160;and&#160;adds them together and&#160;you&#160;don't&#160;explicitly state&#160;their&#160;type,&#160;the&#160;function will work&#160;on&#160;any&#160;two<br/>
+parameters&#160;that&#160;act&#160;like&#160;numbers.<br/>
+Haskell is&#160;<b>elegant and concise</b>.&#160;Because it&#160;uses&#160;a lot&#160;of&#160;high&#160;level&#160;concepts,&#160;Haskell programs&#160;are usually shorter than&#160;their<br/>
+imperative&#160;equivalents.&#160;And&#160;shorter&#160;programs are&#160;easier&#160;to&#160;maintain than&#160;longer ones&#160;and&#160;have&#160;less&#160;bugs.<br/>
+Haskell was&#160;made by some&#160;<b>really&#160;smart guys</b>&#160;(with PhDs).&#160;Work on&#160;Haskell began&#160;in&#160;1987 when&#160;a committee of researchers<br/>
+got&#160;together to design a&#160;kick-ass&#160;language.&#160;In&#160;2003&#160;the Haskell&#160;Report was&#160;published,&#160;which&#160;defines a&#160;stable&#160;version&#160;of&#160;the<br/>
+language.<br/>
+<b>What you&#160;need&#160;to&#160;dive&#160;in</b><br/>
+A&#160;text&#160;editor and&#160;a&#160;Haskell compiler.&#160;You&#160;probably&#160;already have your&#160;favorite&#160;text editor installed&#160;so we won't&#160;waste&#160;time&#160;on&#160;that.<br/>
+For the&#160;purposes&#160;of&#160;this&#160;tutorial we'll be&#160;using&#160;GHC,&#160;the most&#160;widely&#160;used&#160;Haskell compiler.&#160;The&#160;best&#160;way&#160;to&#160;get&#160;started&#160;is&#160;to<br/>
+download&#160;the&#160;Haskell Platform,&#160;which&#160;is&#160;basically&#160;Haskell with batteries&#160;included.<br/>
+GHC can&#160;take a&#160;Haskell script&#160;(they&#160;usually&#160;have&#160;a .hs&#160;extension)&#160;and&#160;compile&#160;it&#160;but&#160;it&#160;also has an&#160;interactive&#160;mode&#160;which allows<br/>
+you&#160;to&#160;interactively interact&#160;with&#160;scripts.&#160;Interactively.&#160;You&#160;can&#160;call&#160;functions from&#160;scripts that&#160;you&#160;load and the&#160;results are<br/>
+displayed&#160;immediately.&#160;For learning it's a&#160;lot&#160;easier&#160;and&#160;faster than&#160;compiling every&#160;time&#160;you&#160;make a&#160;change&#160;and&#160;then&#160;running&#160;the<br/>
+2 of 3<br/>
+01/03/17 09:12<br/>
+<hr/>
+<a name=3></a>Introduction&#160;-&#160;Learn&#160;You&#160;a&#160;Haskell for&#160;Great&#160;Good!<br/>
+http://learnyouahaskell.com/introduction<br/>
+program from&#160;the&#160;prompt.&#160;The interactive mode&#160;is invoked&#160;by typing in&#160;&#160;<b>ghci&#160;</b>&#160;at&#160;your prompt.&#160;If&#160;you&#160;have&#160;defined&#160;some&#160;functions<br/>
+in a&#160;file&#160;called,&#160;say,&#160;&#160;<b>myfunctions.hs&#160;</b>,&#160;you&#160;load up those&#160;functions by typing&#160;in&#160;&#160;<b>:l myfunctions&#160;</b>&#160;and then&#160;you&#160;can&#160;play with<br/>
+them, provided&#160;&#160;<b>myfunctions.hs&#160;</b>&#160;is in&#160;the&#160;same folder from&#160;which&#160;&#160;<b>ghci&#160;</b>&#160;was&#160;invoked.&#160;If&#160;you&#160;change&#160;the&#160;.hs script,&#160;just&#160;run<br/>
+<b>:l myfunctions&#160;</b>&#160;again or&#160;do&#160;&#160;<b>:r&#160;</b>,&#160;which&#160;is&#160;equivalent&#160;because&#160;it&#160;reloads the&#160;current&#160;script.&#160;The usual&#160;workflow&#160;for me&#160;when<br/>
+playing around in&#160;stuff&#160;is&#160;defining&#160;some&#160;functions&#160;in&#160;a&#160;.hs&#160;file,&#160;loading&#160;it&#160;up and messing&#160;around&#160;with&#160;them&#160;and&#160;then changing&#160;the<br/>
+.hs file,&#160;loading it&#160;up&#160;again and so&#160;on. This&#160;is&#160;also&#160;what&#160;we'll&#160;be&#160;doing here.<br/>
+Table of&#160;contents<br/>
+Starting Out<br/>
+3 of 3<br/>
+01/03/17 09:12<br/>
+<hr/>
+</body>
+</html>

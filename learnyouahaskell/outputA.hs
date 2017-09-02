@@ -5,10 +5,17 @@ import System.IO
 
 {-
 ./outputA view haiku.txt
+https://downloads.haskell.org/~ghc/6.12.2/docs/html/libraries/containers-0.3.0.0/Data-Map.html
+https://hackage.haskell.org/package/base-4.10.0.0/docs/Data-List.html
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 -}
 dispatch :: [(String, [String] -> IO ())]
 dispatch = [("add", add), ("view", view), ("remove", remove)]
-
+{- 16.08.2017 21:17:10
+usage :   (action>    <filename>  <data to add>
+ e.g. view filename
+ e.g. remove filename <linenumber - 1>
+-}
 main = do
   (command:args) <- getArgs
   let (Just action) = lookup command dispatch
