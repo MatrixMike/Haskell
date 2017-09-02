@@ -56,7 +56,7 @@ module FRP.Helm.Graphics (
 ) where
 
 import FRP.Helm.Color (Color, black, Gradient)
-import Graphics.Rendering.Cairo.Matrix (Matrix)
+--import Graphics.Rendering.Cairo.Matrix (Matrix)
 
 {-| A data structure describing the weight of a piece of font. -}
 data FontWeight = LightWeight |
