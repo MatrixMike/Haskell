@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-| Contains signals that sample input from the keyboard. -}
 module FRP.Helm.Keyboard (
   -- * Types
@@ -13,8 +14,8 @@ import Data.List
 import Foreign hiding (shift)
 import Foreign.C.Types
 import FRP.Elerea.Param hiding (Signal)
-import FRP.Helm.Sample
-import FRP.Helm.Signal
+import Sample
+import Signal
 
 {-| The SDL bindings for Haskell don't wrap this, so we have to use the FFI ourselves. -}
 foreign import ccall unsafe "SDL_GetKeyboardState" sdlGetKeyState :: Ptr CInt -> IO (Ptr Word8)

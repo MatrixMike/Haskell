@@ -1,4 +1,5 @@
-module FRP.Helm.Engine where
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
+module Engine where
 import qualified Graphics.UI.SDL as SDL
 import qualified Graphics.Rendering.Cairo as Cairo
 import qualified Data.Map as Map

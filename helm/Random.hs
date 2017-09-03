@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 module FRP.Helm.Random (
   range,
@@ -8,9 +9,9 @@ import Control.Applicative (pure)
 import Control.Monad (liftM, join, replicateM)
 import FRP.Elerea.Param hiding (Signal)
 import qualified FRP.Elerea.Param as Elerea (Signal)
-import FRP.Helm.Signal
-import FRP.Helm.Sample
-import FRP.Helm.Engine
+import Signal
+import Sample
+import Engine
 import System.Random (Random, randomRIO)
 
 {-| Given a range from low to high and a signal of values, this produces

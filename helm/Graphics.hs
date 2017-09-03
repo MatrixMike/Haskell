@@ -1,6 +1,7 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-| Contains all the data structures and functions for composing
     and rendering graphics. -}
-module FRP.Helm.Graphics (
+module Graphics (
   -- * Types
   Element(..),
   FontWeight(..),
@@ -55,7 +56,7 @@ module FRP.Helm.Graphics (
   ngon
 ) where
 
-import FRP.Helm.Color (Color, black, Gradient)
+import Color (Color, black, Gradient)
 --import Graphics.Rendering.Cairo.Matrix (Matrix)
 
 {-| A data structure describing the weight of a piece of font. -}

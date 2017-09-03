@@ -1,6 +1,6 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-| Contains functions for composing units of time and signals that sample from the game clock. -}
-module FRP.Helm.Time (
+module Time (  --was module FRP.Helm.Time (
   -- * Units
   Time,
   millisecond,
@@ -26,8 +26,9 @@ import Control.Monad
 import FRP.Elerea.Param hiding (delay, Signal, until)
 import qualified FRP.Elerea.Param as Elerea (Signal, until)
 import Data.Time.Clock.POSIX (getPOSIXTime)
-import FRP.Helm.Signal
-import FRP.Helm.Sample
+import Signal
+--import FRP.Helm.Sample
+import Sample
 import System.IO.Unsafe (unsafePerformIO)
 
 {-| A type describing an amount of time in an arbitary unit. Use the time

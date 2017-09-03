@@ -1,5 +1,5 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
-module FRP.Helm.Signal(
+module Signal(
   Signal(..),
   -- * Composing
   constant,
@@ -27,8 +27,8 @@ import Control.Applicative
 import Data.Traversable (sequenceA)
 import FRP.Elerea.Param hiding (Signal)
 import qualified FRP.Elerea.Param as Elerea (Signal)
-import FRP.Helm.Sample
-import FRP.Helm.Engine
+import Sample
+import Engine
 
 newtype Signal a = Signal {signalGen :: SignalGen Engine (Elerea.Signal (Sample a))}
 

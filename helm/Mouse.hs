@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-| Contains signals that sample input from the mouse. -}
 module FRP.Helm.Mouse
 (
@@ -18,8 +19,8 @@ import Foreign.Marshal.Alloc
 import Foreign.Ptr
 import Foreign.Storable
 import FRP.Elerea.Param hiding (Signal)
-import FRP.Helm.Sample
-import FRP.Helm.Signal
+import Sample
+import Signal
 import qualified Graphics.UI.SDL as SDL
 import qualified Graphics.UI.SDL.Events as SDL
 

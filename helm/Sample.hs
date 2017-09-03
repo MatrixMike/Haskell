@@ -1,4 +1,5 @@
-module FRP.Helm.Sample (
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
+module Sample (
   Sample(..),
   value,
   update

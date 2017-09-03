@@ -21,8 +21,8 @@ module FRP.Helm.Text (
   height
 ) where
 
-import FRP.Helm.Color (Color, black)
-import FRP.Helm.Graphics (Element(TextElement), Text(..), FontWeight(..), FontStyle(..))
+import Color (Color, black)
+import Graphics (Element(TextElement), Text(..), FontWeight(..), FontStyle(..))
 
 {-| Creates the default text. By default the text is black sans-serif
     with a height of 14pt. -}

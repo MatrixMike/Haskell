@@ -1,6 +1,6 @@
 {-# LANGUAGE DeriveGeneric #-}
 {-| Contains all data structures and functions for composing colors. -}
-module FRP.Helm.Color (
+module Color (
   -- * Types
   Color(..),
   Gradient(..),
