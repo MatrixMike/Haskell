@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-| Contains all the data structures and functions for composing
     pieces of formatted text. -}
 module FRP.Helm.Text (

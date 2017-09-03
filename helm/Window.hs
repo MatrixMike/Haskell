@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-| Contains signals that sample input from the game window. -}
 module FRP.Helm.Window (
   -- * Dimensions

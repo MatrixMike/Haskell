@@ -34,5 +34,5 @@ data Shape = PolygonShapeX Path |
 type Path = [(Double, Double)]
 
 pth :: Path
-pth = [(1.1,2.2)]
+pth = [(1.1,2.2),(3.3,4.4)]
 

@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-| Contains miscellaneous utility functions such as functions for working with signals and signal generators. -}
 module FRP.Helm.Utilities (
   -- * Angles

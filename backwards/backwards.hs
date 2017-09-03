@@ -2,6 +2,7 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Reversew
 
+main :: IO()
 main = do
   line <- getLine
   if null line
