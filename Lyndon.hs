@@ -1,10 +1,11 @@
---
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
+
 --main = print "Hello World"
 {-
 multiple line comments
 -}
 -- import GHC.Generics
-{-# OPTIONS_GHC -fwarn-missing-signatures #-}
+
 import Data.List
 
 main =  putStrLn("Michael" `intersect` "Hewitt")
