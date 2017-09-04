@@ -1,10 +1,10 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Data.Char
 list = [1, 2, 3, 4, 5]
-
+--let x = 41
 
 main = do
-    let x = 41
+
     print list
 
     print $ head list
@@ -64,5 +64,5 @@ main = do
     print $ words "Hello world"
     print $ unwords ["Hello", "world"] 
     
-    print $ isAlpha x
+--    print $ isAlpha x
     
