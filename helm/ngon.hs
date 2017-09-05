@@ -9,11 +9,18 @@ producing a list of co-ordinates of the vertices of a polygon
 main :: IO()
 main = do
 --    print  4 
-    print $ poly
+    print $ poly1
+    print $ poly2
     print pth
     
-poly :: Shape
-poly = ngon 6 2.0
+poly1 :: Shape
+poly1 = ngon 6 2.0
+
+poly2 :: Shape
+poly2 = ngon2
+
+ngon2 :: Shape
+ngon2 = RectangleShape (1.1,2.2)
 
 {-| Creates a generic n-sided polygon (e.g. octagon, pentagon, etc) with
     an amount of sides and radius. -}
