@@ -1,8 +1,11 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Data.Char
+
+list :: [Integer]
 list = [1, 2, 3, 4, 5]
 --let x = 41
 
+main :: IO ()
 main = do
 
     print list
