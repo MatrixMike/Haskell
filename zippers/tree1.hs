@@ -1,6 +1,8 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
-module Tree1 ()
+{-module Tree1 ()
     where
+-}
+-- appears that cannot have a module and a main
 
 main :: IO()
 main = 
