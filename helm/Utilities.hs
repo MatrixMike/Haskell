@@ -1,5 +1,17 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-| Contains miscellaneous utility functions such as functions for working with signals and signal generators. -}
+
+{-main ::  IO()
+main = print turns 2
+
+
+main :: IO()
+main = do
+--    print  4 
+    print $ turns 2
+-}
+
+
 module FRP.Helm.Utilities (
   -- * Angles
   radians,
@@ -9,6 +21,8 @@ module FRP.Helm.Utilities (
   (<|),
   (|>),
 ) where
+
+
 
 {-| Converts radians into the standard angle measurement (radians). -}
 radians :: Double -> Double
@@ -31,3 +45,7 @@ turns n = 2 * pi * n
     more consistent. -}
 (<|) :: (a -> b) -> a -> b
 (<|) = ($)
+
+
+
+    

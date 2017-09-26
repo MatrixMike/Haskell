@@ -11,6 +11,7 @@ main = do
 --    print  4 
     print $ poly1
     print $ poly2
+    print poly1
     print pth
     
 poly1 :: Shape
