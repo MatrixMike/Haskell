@@ -13,6 +13,6 @@ main = do
     getUserDocumentsDirectory >>= print  -}
   getArgs >>= print
   getProgName >>= print
-  getEnvironment >>= print
+--  getEnvironment >>= print        --works well, just a lot of output to deal with
 --    environment <- getEnvironment
 --    simpleHTTP nullConf $ ok $ show environment
