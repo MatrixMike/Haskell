@@ -7,7 +7,7 @@ y::Int
 y=4
 
 sroot :: Int -> Int -> Float
-sroot x y = sqrt(fromIntegral x * fromIntegral x) + sqrt(fromIntegral y * fromIntegral y)
+sroot x y = sqrt(fromIntegral x * fromIntegral x + fromIntegral y * fromIntegral y)
 
 
 main = do
