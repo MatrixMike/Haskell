@@ -1,4 +1,7 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 -- 08.10.2017 17:30:47
+-- 11.10.2017 21:36:05
+-- http://learnyouahaskell.com/syntax-in-functions
 module Main where
 
 --import Text.CaseConversion
