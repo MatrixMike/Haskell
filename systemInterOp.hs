@@ -1,8 +1,10 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import System.Info
-
+-- 01.10.2017 22:38:53
 --import Happstack.Server.Env
 import System.Environment
 
+main :: IO ()
 main = do
   print os
   print arch

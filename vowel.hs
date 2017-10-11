@@ -15,16 +15,17 @@ convert given string to lower case and test each character for vowels
     else add character 
 -}
 remVowels :: Char -> Char
-remVowels  c ='a'
---         | c ='e'
+remVowels c 
+           | c =='a' = 'x'
+           | c =='e' = 'y'
 --         | c ='i'
 --         | c ='o'
 --         | c ='u'  
-         | otherwise  = 'z'
+           | otherwise  = 'z'
          
     
 
 main :: IO ()
 main = do
-    putStrLn remVowels "Hewitt"
+    print $  remVowels 'a'
     
