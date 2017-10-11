@@ -20,10 +20,10 @@ convert given string to lower case and test each character for vowels
 remVowels :: Char -> Char
 remVowels c 
            | c =='a' = 'x'
-           | c =='e' = 'y'
---         | c ='i'
---         | c ='o'
---         | c ='u'  
+           | c =='e' = 'x'
+           | c =='i' = 'x'
+           | c =='o' = 'x'
+           | c =='u' = 'x'  
            | otherwise  = 'z'
          
     
