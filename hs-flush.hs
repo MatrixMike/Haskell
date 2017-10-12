@@ -1,5 +1,7 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import System.IO
 -- 06.10.2017 19:07:39
+main :: IO ()
 main = do
     putStr "how are you today? "
     hFlush stdout
