@@ -26,7 +26,15 @@ remVowels c
            | c =='u' = 'x'  
            | otherwise  = 'z'
          
-    
+remVowelsL :: Char -> Bool
+remVowelsL c 
+           | c =='a' = True
+           | c =='e' = True
+           | c =='i' = True
+           | c =='o' = True
+           | c =='u' = True
+           | otherwise  = False
+         
 
 main :: IO ()
 main = do
