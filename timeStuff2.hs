@@ -4,6 +4,10 @@ import Data.Time.Calendar
 import Data.Time.LocalTime
 import Data.Time.Calendar.WeekDate
 
+{-
+https://techoverflow.net/2014/06/13/get-current-year-month-day-in-haskell/
+-}
+
 main :: IO()
 main = do
     now <- getCurrentTime
@@ -15,8 +19,8 @@ main = do
     putStrLn $ "Year: " ++ show year
     putStrLn $ "Month: " ++ show month
     putStrLn $ "Day: " ++ show day
-    putStrLn $ "Day: " ++ show day
-    putStrLn $ now
+--    putStrLn $ "Day: " ++ show day
+--   putStrLn $ now
     
 --    putStrLn $ "WeekDate" ++ show swd
     
