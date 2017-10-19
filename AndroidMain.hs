@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-# LANGUAGE ForeignFunctionInterface, CPP #-}
 {-# OPTIONS_GHC -Wall #-}
 
