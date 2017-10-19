@@ -1,6 +1,9 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 
 -- (/) :: Fractional a => a -> a -> a
+{-
+https://stackoverflow.com/questions/3968265/integer-to-float
+-}
 
 main :: IO()
 main = do
