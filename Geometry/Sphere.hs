@@ -1,4 +1,4 @@
-    module Geometry.Sphere
+module Geometry.Sphere
       ( volume
       , area
       ) where
