@@ -3,12 +3,21 @@
 --main = print "Hello World"
 {-
 multiple line comments
+https://stackoverflow.com/questions/16404435/haskell-capitalize-all-letters-in-a-list-string-with-toupper
 -}
 -- import GHC.Generics
 
 import Data.List
+import Data.Char
+import Data.List
 
-main =  putStrLn("Michael" `intersect` "Hewitt")
+main =  do
+   putStrLn("Michael" `intersect` "Hewitt")
+   print $ fmap (* 2) list2
+   print $ fmap (fmap toUpper) stations1
+   print $ fmap (fmap toUpper) list3
+--   print $ fmap (* 3) listOfLists
+   
 --      putStrLn([stations1 intersect stations2])
 
 --       putStrLn(myAdd 4 5)

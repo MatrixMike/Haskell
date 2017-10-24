@@ -1,5 +1,6 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Data.Char
+import Control.Applicative
 
 list :: [Integer]
 list = [1, 2, 3, 4, 5]
@@ -65,7 +66,10 @@ main = do
     print $ [(x, y) | x <- [1..5], y <- ['a'..'e']]
 
     print $ words "Hello world"
-    print $ unwords ["Hello", "world"] 
+    print $ unwords ["Hello", "world"]
+    print $ fmap (* 0.5) [1..6]
+    print list
+--    print $ fmap (* 0.5) list    -- why does this NOT work?
     
 --    print $ isAlpha x
     
