@@ -7,6 +7,10 @@
 --
 -- Updated for latest version of Helm by Sean Seefried
 --
+{-
+suddenly the obvious thing to try is
+cabal install helm
+-}
 
 
 module Game where
