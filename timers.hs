@@ -1,12 +1,17 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Control.Concurrent
 import Control.Concurrent.STM
+{-
+remember when re-compiling to remove the exe - as ghc does not always update
+-}
 
+main :: IO()
 main = do
-    timer1 <- newTimer (2 * 1000000)
+    timer1 <- newTimer (20 * 1000000)
     waitTimer timer1
     putStrLn "Timer 1 expired"
 
-    timer2 <- newTimer (1 * 1000000)
+    timer2 <- newTimer (30 * 1000000)
     forkIO $ do
         waitTimer timer2
         putStrLn "Timer 2 expired"
