@@ -44,3 +44,20 @@ main = do
   putStrLn ""
   putStrLn $ "Len: " ++ show (length "hello")
   putStrLn $ "Char:" ++ show ("hello" !! 1)
+
+{-
+Contains:  True
+Count:     2
+HasPrefix: True
+HasSuffix: True
+Index:     Just 1
+Join:      "a-b"
+Repeat:    "aaaaa"
+Replace:   "f00"
+Split:     ["a","b","c","d","e"]
+ToLower:   test
+ToUpper:   TEST
+
+Len: 5
+Char:'e'
+-}
