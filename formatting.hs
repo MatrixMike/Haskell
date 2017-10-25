@@ -13,6 +13,10 @@ data Point = Point
   , y :: Int
   } deriving (Show)
 
+bg :: [Double]
+bg = (/)  <$> [22.0, 32.0, 42.0] <*> [26, 23, 21, 19, 17, 15, 13, 12]
+
+main :: IO()
 main = do
   let p = Point 1 2
   fprint (shown % "\n") p
@@ -45,6 +49,8 @@ main = do
   let s = format ("a " %string) "string"
   print s
   hPrint stderr $ format ("an " %string) "error"
+  mapM_ print bg
+  
 
 {-
 Point {x = 1, y = 2}
