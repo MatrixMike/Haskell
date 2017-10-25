@@ -14,7 +14,7 @@ data Point = Point
   } deriving (Show)
 
 bg :: [Double]
-bg = (/)  <$> [22.0, 32.0, 42.0] <*> [26, 23, 21, 19, 17, 15, 13, 12]
+bg = (/)  <$> [22.0, 32.0, 42.0] <*> [26, 23, 21, 19, 17, 15, 13, 12]  -- unsorted list
 
 main :: IO()
 main = do
@@ -50,6 +50,7 @@ main = do
   print s
   hPrint stderr $ format ("an " %string) "error"
   mapM_ print bg
+--  mapM_ (fprint ("|" % (prec 5) % "|" % (prec 5) % "|\n")) bg
   
 
 {-

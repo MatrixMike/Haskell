@@ -10,7 +10,10 @@ not sure what is going on here (yet)
 bg = (/)  <$> [22.0, 32.0, 42.0] <*> [26, 23, 21, 19, 17, 15, 13, 12]
 
 main :: IO ()
-main =  print bg
+main =  do
+--    print bg
+    mapM_ print bg
+--    https://stackoverflow.com/questions/6280585/need-to-know-what-and-do-in-haskell
 --    print $ (+) <$> (* 10) <$> [1, 2, 3] <*> [4, 5, 6]  -- was (* 10)
 --    print $ (+) <$> (/ 10) <$> [1, 2, 3] <*> [4, 5, 6]  --
 --    print $ (+) <$>  [1, 2, 3] <*> [4, 5, 6]  --
