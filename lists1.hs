@@ -69,7 +69,7 @@ main = do
     print $ unwords ["Hello", "world"]
     print $ fmap (* 0.5) [1..6]
     print list
-    print $ fmap (* 0.5) list    -- why does this NOT work?
+--    print $ fmap (* 0.5) list    -- why does this NOT work?
     
 --    print $ isAlpha x
     
