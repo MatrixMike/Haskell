@@ -2,7 +2,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 {-
-cabal install formatting  : a bit of a guess but it worked
+cabal install formatting  : a bit of a guess but it worked : formatting-6.2.5
 -}
 import Data.Char (chr)
 import Formatting
@@ -14,11 +14,13 @@ data Point = Point
   } deriving (Show)
 
 bg :: [Double]
-bg = (/)  <$> [22.0, 32.0, 42.0] <*> [26, 23, 21, 19, 17, 15, 13, 12]  -- unsorted list
+bg = (/)  <$> [22.0, 32.0, 42.0] <*> [26, 23, 21, 19, 17, 15, 13, 12]  -- produces an unsorted list
 
 main :: IO()
 main = do
   let p = Point 1 2
+  fprint ("|" % (prec 5) % "|" % (prec 5) % "|\n")  (3.45 :: Double) (7.89 :: Double)
+  fprint ("|" % (prec 5) %  "|\n")  (6.78 :: Double)
   fprint (shown % "\n") p
   fprint (shown % "\n") True
   fprint (int % "\n") 123
@@ -50,7 +52,8 @@ main = do
   print s
   hPrint stderr $ format ("an " %string) "error"
   mapM_ print bg
---  mapM_ (fprint ("|" % (prec 5) % "|" % (prec 5) % "|\n")) bg
+  fprint ("|" % (prec 6) %  "|\n")  (56.7812345 :: Double)
+
   
 
 {-
