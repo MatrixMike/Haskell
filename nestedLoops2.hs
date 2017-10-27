@@ -2,8 +2,11 @@
 
 main :: IO()
 main =  do
-  a <- [1, 2, 3]
---     b <- [4, 5, 6]
-  print  4      --    a  --      * 10 + b
+    let a = [1, 2, 3]
+    let  b = [4, 5, 6]   --     let a <- [1, 2, 3]
+    -- study difference between = and <- 
+    print a 
+    print b 
+    print  4      --    a  --      * 10 + b
   
   
