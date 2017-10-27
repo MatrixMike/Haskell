@@ -11,7 +11,7 @@ main = do
 --    print  4 
     print $ poly1
     print $ poly2
-    print poly1
+    print poly1  -- check actual values created before migrating this to x11 test
     print pth
     
 poly1 :: Shape
