@@ -4,7 +4,7 @@
 -- http://learnyouahaskell.com/syntax-in-functions
 module Main where
 
-import Text.CaseConversion
+--import Text.CaseConversion
 import Data.Char
 import Data.List
 
