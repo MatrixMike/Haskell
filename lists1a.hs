@@ -3,7 +3,10 @@ import Data.Char
 import Control.Applicative
 
 list :: [Integer]
-list = [1, 2, 3, 4, 5]
+--list = [1, 2, 3, 4, 5]
+list = [1..5]
+x = [1..5]
+y = ['a'..'e']
 --let x = 41
 
 main :: IO ()
@@ -63,13 +66,18 @@ main = do
     print $ zip [1, 2, 3] ['a', 'b', 'c']
     print $ unzip [(1, 'a'), (2, 'b'), (3, 'c')]
     print $ zipWith (+) [1, 2, 3] [4, 5, 6]
-    print $ [(x, y) | x <- [1..5], y <- ['a'..'e']]
+    print [(x, y) | x <- [1..5], y <- ['a'..'e']]
+ --   print [ x/y | x <- [1..5], y <- ['a'..'e']]
+
+    print $  zipWith  (+) x  [5.0,6,7,8]
+    print $  zipWith  (/) x  [5.0,6,7,8]
+    print $  zipWith  (-) x  [5.0,6,7,8]
 
     print $ words "Hello world"
     print $ unwords ["Hello", "world"]
     print $ fmap (* 0.5) [1..6]
     print list
 --    print $ fmap (* 0.5) list    -- why does this NOT work?
-    
+
 --    print $ isAlpha x
-    
+

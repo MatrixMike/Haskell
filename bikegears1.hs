@@ -7,6 +7,15 @@ https://hackage.haskell.org/package/base-4.10.0.0/docs/Control-Applicative.html
 http://learnyouahaskell.com/making-our-own-types-and-typeclasses#the-functor-typeclass
 not sure what is going on here (yet)
 -}
+f1 :: [Double]
+f1 = [42, 52]
+
+r1 :: [Double]
+r1 = [14,17,20,24,28]
+
+bg1 = (/) <$> f1 <*> r1
+bg1 :: [Double]
+
 bg :: [Double]
 bg = (/)  <$> [22.0, 32.0, 42.0] <*> [26, 23, 21, 19, 17, 15, 13, 12]
 
@@ -14,11 +23,13 @@ main :: IO ()
 main =  do
 --    print bg
     mapM_ print bg
+    print "++++"
+    mapM_ print bg1
 --    https://stackoverflow.com/questions/6280585/need-to-know-what-and-do-in-haskell
 --    print $ (+) <$> (* 10) <$> [1, 2, 3] <*> [4, 5, 6]  -- was (* 10)
 --    print $ (+) <$> (/ 10) <$> [1, 2, 3] <*> [4, 5, 6]  --
 --    print $ (+) <$>  [1, 2, 3] <*> [4, 5, 6]  --
- 
+
 
 --    print bg
 --    print $ fmap (* 0.5) [1..6]

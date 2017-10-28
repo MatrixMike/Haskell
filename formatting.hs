@@ -3,6 +3,7 @@
 
 {-
 cabal install formatting  : a bit of a guess but it worked : formatting-6.2.5
+:browse :info and examine s
 -}
 import Data.Char (chr)
 import Formatting
@@ -15,6 +16,8 @@ data Point = Point
 
 bg :: [Double]
 bg = (/)  <$> [22.0, 32.0, 42.0] <*> [26, 23, 21, 19, 17, 15, 13, 12]  -- produces an unsorted list
+
+s = format ("a " %string) "string"
 
 main :: IO()
 main = do
@@ -48,13 +51,13 @@ main = do
     ("|" % (right 6 ' ') % "|" % (right 6 ' ') % "|\n")
     ("foo" :: String)
     ("b" :: String)
-  let s = format ("a " %string) "string"
+
   print s
   hPrint stderr $ format ("an " %string) "error"
   mapM_ print bg
-  fprint ("|" % (prec 6) %  "|\n")  (56.7812345 :: Double)
+  fprint ("|" % prec 6 %  "|\n")  (56.7812345 :: Double)
 
-  
+
 
 {-
 Point {x = 1, y = 2}
