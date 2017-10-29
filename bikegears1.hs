@@ -8,6 +8,9 @@ http://learnyouahaskell.com/making-our-own-types-and-typeclasses#the-functor-typ
 not sure what is going on here (yet)
 -}
 import Bglib
+import DoubleTest
+import Reversew
+import Vowel2 
 
 f1 :: [Double]
 f1 = [42, 52]
