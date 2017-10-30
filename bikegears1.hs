@@ -12,6 +12,7 @@ import DoubleTest
 import Reversew
 import Vowel2 
 import Collision
+import SinR 
 
 f1 :: [Double]
 f1 = [42, 52]
