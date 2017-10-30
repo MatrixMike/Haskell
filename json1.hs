@@ -18,4 +18,7 @@ main :: IO()
 main = do
     print myData
     print $ unpack $ encode myData
+    print "----"
     print $ (decode "{ \"number\" : 123, \"text\" : \"Hello\" }" :: Maybe MyData)
+    print "----"
+    print $ (decode "{ \"number\" : 123, \"text\" : \"HelloM\" }" :: Maybe MyData)

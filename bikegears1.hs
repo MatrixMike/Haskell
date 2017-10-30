@@ -11,6 +11,7 @@ import Bglib
 import DoubleTest
 import Reversew
 import Vowel2 
+import Collision
 
 f1 :: [Double]
 f1 = [42, 52]
