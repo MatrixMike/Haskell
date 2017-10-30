@@ -1,10 +1,17 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE DeriveGeneric #-}
+{-
+cabal install : ~/cabal/cabal install aeson
+note tabs warning a.o.t. spaces : System/Random.hs:43:1: warning: [-Wtabs]
+-}
 
 import Data.Aeson
 import Data.ByteString.Lazy.Char8
 import GHC.Generics
+{-
+http://json.org/
+-}
 
 data MyData = MyData { text :: String, number :: Int } deriving (Show, Generic)
 
