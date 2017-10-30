@@ -1,4 +1,10 @@
-import Network.HTTP.Conduit
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import qualified Data.ByteString.Lazy as L
+import Network.HTTP.Conduit
 
-main = simpleHttp "http://www.winsoft.sk" >>= L.putStr
+{-
+cabal install http-conduit
+https://haskell-lang.org/library/http-client
+-}
+main :: IO()
+main = simpleHttp "http://www.electroteach.com" >>= L.putStr
