@@ -40,6 +40,7 @@ main =  do
 --    print $ (+) <$> (/ 10) <$> [1, 2, 3] <*> [4, 5, 6]  --
 --    print $ (+) <$>  [1, 2, 3] <*> [4, 5, 6]  --
     print [ x/y  |  x <- [22.0, 32.0, 42.0], y <- [26, 23, 21, 19, 17, 15, 13, 12]]
+    print [ x/y  |  x <- f1, y <- r1]
 -- above is a double list comprehension
 --    print bg
 --    print $ fmap (* 0.5) [1..6]

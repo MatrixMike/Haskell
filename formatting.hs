@@ -17,6 +17,9 @@ data Point = Point
 bg :: [Double]
 bg = (/)  <$> [22.0, 32.0, 42.0] <*> [26, 23, 21, 19, 17, 15, 13, 12]  -- produces an unsorted list
 
+dbl :: Double
+dbl = 56.789
+
 s = format ("a " %string) "string"
 
 main :: IO()
@@ -48,15 +51,16 @@ main = do
     ("foo" :: String)
     ("b" :: String)
   fprint
-    ("|" % (right 6 ' ') % "|" % (right 6 ' ') % "|\n")
+    ("|" % right 6 ' ' % "|" % right 6 ' ' % "|\n")
     ("foo" :: String)
     ("b" :: String)
-
+-- see https://hackage.haskell.org/package/base-4.10.0.0/docs/Text-Printf.html
   print s
   hPrint stderr $ format ("an " %string) "error"
   mapM_ print bg
   fprint ("|" % prec 6 %  "|\n")  (56.7812345 :: Double)
-
+  fprint ("|" % prec 6 %  "|\n")  dbl
+  [printf (v) | v <- bg]
 
 
 {-
