@@ -4,11 +4,13 @@
 addOneList' :: Num b => [b] -> [b]
 addOneList' lst = map (\x -> x + 1) lst
 
+myList :: [Integer]
 myList = [3,4,6,7]
 
 main :: IO()
 main = do
     print $ (\x -> x + 1) 4
+    print myList
     print $ addOneList' myList
     
 

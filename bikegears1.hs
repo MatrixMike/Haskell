@@ -14,7 +14,7 @@ import DoubleTest
 import Reversew
 import Vowel2 
 import Collision
-import SinR 
+-- import SinR   -- I changed SinR from a module to a main
 
 f1 :: [Double]
 f1 = [42, 52]
@@ -39,8 +39,8 @@ main =  do
 --    print $ (+) <$> (* 10) <$> [1, 2, 3] <*> [4, 5, 6]  -- was (* 10)
 --    print $ (+) <$> (/ 10) <$> [1, 2, 3] <*> [4, 5, 6]  --
 --    print $ (+) <$>  [1, 2, 3] <*> [4, 5, 6]  --
-
-
+    print [ x/y  |  x <- [22.0, 32.0, 42.0], y <- [26, 23, 21, 19, 17, 15, 13, 12]]
+-- above is a double list comprehension
 --    print bg
 --    print $ fmap (* 0.5) [1..6]
 

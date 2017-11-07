@@ -7,4 +7,4 @@ cabal install http-conduit
 https://haskell-lang.org/library/http-client
 -}
 main :: IO()
-main = simpleHttp "https://www.haskell.org" >>= L.putStr
+main = simpleHttp "http://www.celestrak.com/NORAD/elements/cubesat.txt" >>= L.putStr
