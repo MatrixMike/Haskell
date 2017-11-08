@@ -19,15 +19,14 @@ main
   print myVariable
   let ans = sqinc 4
   print ans
-  printNumbers
+  printNumbers   -- see definition further down
   print (degrees 20)
   print (inc 10)
  --   print sqinc 4
  --   putStrLn ans
 
 --   let myVariable = 3
---   myVariable :: Int
---    myVariable = 3
+
 --    putStrLn (show (degrees 20))
 --    putStrLn (show (inc 10)) 
 --putStrLn (show myMap     <finish this Mike
@@ -105,5 +104,7 @@ Linc \x -> x + 1
 -}
 --invaderPoss = map (\x -> (x, yy)) xposs
 --[r1,r2,r3] = map (x=x+1) ( zip [1,2,3] ["a","b","c"]  )
--- array2D :: [Int][Int]
--- array2D = [1,2,3,4][[2,3,4]
+
+{-array2D :: [Int][Int]
+array2D = [1,2,3,4]  [2,3,4]
+-}
