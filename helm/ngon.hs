@@ -33,7 +33,11 @@ ngon n r = PolygonShapeX (map (\i -> (r * sin (t * i), r * sin (t * i))) [0 .. f
 --    sinr = r * sin (t * i)      --  i not in scope when used inside map 
 
 {-| A data structure describing a some sort of graphically representable object,
-    such as a polygon formed from a list of points or a rectangle. -}
+    such as a polygon formed from a list of points or a rectangle.
+    https://userpages.uni-koblenz.de/~laemmel/paradigms1011/resources/pdf/haskell.pdf
+    The constructors in a data declaration can also have 
+parameters.
+     -}
 data Shape = PolygonShapeX Path |
              RectangleShape (Double, Double) |
              ArcShape (Double, Double) Double Double Double (Double, Double) deriving (Show, Eq, Ord, Read)
