@@ -7,7 +7,7 @@ capacitor :: Double
 capacitor = 10e-6 -- 10uF
 
 inductor :: Double
-inductor = 100e-3 -- 100mH
+inductor =  115e-6      -- 100e-3 -- 100mH
 
 frequency :: Double
 frequency = 1 / (2 * pi * sqrt (capacitor * inductor))
