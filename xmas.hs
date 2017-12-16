@@ -1,4 +1,4 @@
-
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 main :: IO()
 main = do 
     let s = [ x * (13-x)   |  x <- [12,11..1]]
