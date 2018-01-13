@@ -4,6 +4,8 @@ import System.Log.Handler.Simple
 import System.Log.Handler (setFormatter)
 import System.Log.Formatter
 
+-- cabal install hslogger
+
 -- By default, all messages of level WARNING and above are sent to stderr.
 -- Everything else is ignored.
 
