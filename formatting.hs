@@ -60,7 +60,7 @@ main = do
   mapM_ print bg
   fprint ("|" % prec 6 %  "|\n")  (56.7812345 :: Double)
   fprint ("|" % prec 6 %  "|\n")  dbl
-  [printf (v) | v <- bg]
+--  [printf (v) | v <- bg]   -- make this work
 
 
 {-

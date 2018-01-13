@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-
 aim would be to display a range of numbers between gcd inputs in steps of gcd
 http://radio.abc.net.au/help/offline
@@ -9,13 +10,20 @@ http://radio.abc.net.au/help/offline
     MelbourneABC RN621 AM (3RN)
     MelbourneABC triple j107.5 FM (3JJJ)
 -}
-
+v1 :: Integer
 v1 = 621
+
+v2 :: Integer
 v2 = 774
+
+lst1 :: [Integer]
 lst1 = [2,5..40]
+
+p1 , p2, p3 :: Integer
 p1 = min v1 v2
 p2 = gcd  v1 v2
 p3 = max v1 v2
+
 amr = [p1,p2..p3]
 --amradio = [(min v1 v2), p2 ..       (max v1 v2)]
 
@@ -29,12 +37,12 @@ main = do
     print  $ gcd (min v1 v2) (max v1 v2)
     print  $ gcd 594 774
     print  $ gcd 594 621
-    let amradio = [p1, p2 ..       p3]
+    let amradio = [p1, p2 ..      p3]  -- need type sig for this
 --    print amradio
     print amr
     print lst1
     print $ take 50 $ iterate (+9) 594
-
+--    print $ take 50 $ iterate (gcd 594 774) 594
     
     
     
