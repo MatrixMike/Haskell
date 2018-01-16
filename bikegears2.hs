@@ -1,6 +1,6 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 
---import Control.Applicative
+import Control.Applicative
 {-
 try with and without the import Control.Applicative
 https://hackage.haskell.org/package/base-4.10.0.0/docs/Control-Applicative.html

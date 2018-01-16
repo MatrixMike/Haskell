@@ -31,6 +31,7 @@ main = do
     print  $ gcd 594 621
     let amradio = [p1, p2 ..       p3]
 --    print amradio
+    print "amr"
     print amr
     print lst1
     print $ take 50 $ iterate (+9) 594
