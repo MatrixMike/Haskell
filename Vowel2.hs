@@ -5,12 +5,14 @@
 {-module Main where
 -}
 
-module Vowel2 
+{-module Vowel2 
     (
     remVowels,
     remVowelsL
     )
     where 
+
+-}
 --import Text.CaseConversion
 import Data.Char
 import Data.List
@@ -41,9 +43,17 @@ remVowelsL c
            | c =='o' = True
            | c =='u' = True
            | otherwise  = False
-         
+ 
+-- https://stackoverflow.com/questions/38858857/getting-vowels-from-a-string-and-printing-them-in-haskell 
+-- https://stackoverflow.com/questions/46364784/haskell-checking-the-vowels-in-a-string?rq=1
+isVowel :: Char -> Bool
+isVowel x = x `elem` "aeiou"     
+vowel :: String -> String
+vowel = filter isVowel
 
 main :: IO ()
 main = do
     print $  remVowels 'a'
+    print  $ vowel "The cat sat on the mat"
+    
     
