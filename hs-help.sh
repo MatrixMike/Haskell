@@ -1,2 +1,2 @@
-ghc-pkg  list
+ghc-pkg   list
 
