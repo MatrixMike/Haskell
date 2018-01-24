@@ -7,8 +7,10 @@ http://learnyouahaskell.com/syntax-in-functions
 
 main = do
    let xs = [(1,3),(4,3)]
---   let [a+b |  (a,b) <- xs ]
+   let p = [a+b |  (a,b) <- xs ]
    print   [a+b |  (a,b) <- xs ]
+   print   [a*b |  (a,b) <- xs ]
+   print $ p
    --  [c| c <- x]
 --   c <- xs
    --return c
