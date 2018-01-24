@@ -1,4 +1,5 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 -- 08.10.2017 17:30:47
 -- 11.10.2017 21:36:05
 -- http://learnyouahaskell.com/syntax-in-functions
@@ -46,6 +47,8 @@ remVowelsL c
  
 -- https://stackoverflow.com/questions/38858857/getting-vowels-from-a-string-and-printing-them-in-haskell 
 -- https://stackoverflow.com/questions/46364784/haskell-checking-the-vowels-in-a-string?rq=1
+-- https://en.wikipedia.org/wiki/Vowel_length
+
 isVowel :: Char -> Bool
 isVowel x = x `elem` "aeiou"     
 vowel :: String -> String
