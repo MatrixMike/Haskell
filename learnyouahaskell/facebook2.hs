@@ -11,7 +11,7 @@ main = do
   -- note output characters or string : elements or list
     let word = "Linux"    -- try with own choice of word
     
-    print (head word)
+    print (head word) 
     print (tail word)
     
     print (init word)
@@ -19,6 +19,10 @@ main = do
 
     print (init (tail (word)))
       
--- works for lists with 2 or more elements
--- easy fix for lists with 1 element (but do later)
-   
+{- works for lists with 2 or more elements
+ easy fix for lists with 1 element (but do later)
+   print  $  (last word) ++ (init (tail (word))) --    ++ head word
+ the above causes compiler errors : consider that the answerw to the partial results 
+ could be elements OR lists
+-}
+
