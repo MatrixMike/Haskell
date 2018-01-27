@@ -14,7 +14,4 @@ main = do
 reverseWords :: String -> String
 reverseWords = unwords . map reverse . words
 -}
-<<<<<<< HEAD
 
-=======
->>>>>>> dc23748f0ce48dc44d6b1968b886dac22cae6f60
