@@ -1,28 +1,32 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
+
 {- see also outputB.hs
 -}
-
-main :: IO()
-main = do
+main :: IO ()
+main
 {-    print (head ["one", "two","three","four"])
     print (last ["one", "two","three","four"])
     print (tail ["one", "two","three","four"])
     print (init ["one", "two","three","four"])
 -}
   -- note output characters or string : elements or list
-    let word = "Linux"    -- try with own choice of word
-    
-    print (head word) 
-    print (tail word)
-    
-    print (init word)
-    print (last word)
-
-    print (init (tail (word)))
-      
+ = do
+  let word = "Linux" -- try with own choice of word
+  let h = (head word)
+  let t = (tail word)
+  print (head word) -- an element
+  print (tail word) -- a list 
+  let i = (init word)
+  let l = (last word)
+  print (init word) -- a list
+  print (last word) -- an element
+  let it = init (tail word)
+  let new = l : it ++ [h]
+  print $ init (tail word) -- was (   ())
+  print new
 {- works for lists with 2 or more elements
  easy fix for lists with 1 element (but do later)
    print  $  (last word) ++ (init (tail (word))) --    ++ head word
  the above causes compiler errors : consider that the answerw to the partial results 
  could be elements OR lists
 -}
-
