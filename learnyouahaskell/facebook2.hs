@@ -2,7 +2,8 @@
 
 {- see also outputB.hs
 -}
-
+word = "another"
+h2 = (head word)
 
 main :: IO ()
 main
@@ -13,7 +14,7 @@ main
 -}
   -- note output characters or string : elements or list
  = do
-    let word = "Linux" -- try with own choice of word
+--    let word = "Linux" -- try with own choice of word
     let h = (head word)
     let t = (tail word)
     let i = (init word)
