@@ -2,6 +2,8 @@
 
 {- see also outputB.hs
 -}
+
+
 main :: IO ()
 main
 {-    print (head ["one", "two","three","four"])
@@ -11,19 +13,21 @@ main
 -}
   -- note output characters or string : elements or list
  = do
-  let word = "Linux" -- try with own choice of word
-  let h = (head word)
-  let t = (tail word)
-  print (head word) -- an element
-  print (tail word) -- a list 
-  let i = (init word)
-  let l = (last word)
-  print (init word) -- a list
-  print (last word) -- an element
-  let it = init (tail word)
-  let new = l : it ++ [h]
-  print $ init (tail word) -- was (   ())
-  print new
+    let word = "Linux" -- try with own choice of word
+    let h = (head word)
+    let t = (tail word)
+    let i = (init word)
+    let l = (last word)
+    let it = init (tail word)
+    let new = l : it ++ [h]
+    print (head word) -- an element
+    print (tail word) -- a list 
+
+    print (init word) -- a list
+    print (last word) -- an element
+
+    print $ init (tail word) -- was (   ())
+    print new
 {- works for lists with 2 or more elements
  easy fix for lists with 1 element (but do later)
    print  $  (last word) ++ (init (tail (word))) --    ++ head word
