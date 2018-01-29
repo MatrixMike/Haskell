@@ -5,6 +5,13 @@
 word = "another"
 h2 = (head word)
 
+
+middle :: String -> String
+--check length of input string
+middle s = middle (reverse (init ( tail (word ))))
+-- 
+
+
 main :: IO ()
 main
 {-    print (head ["one", "two","three","four"])
@@ -29,6 +36,8 @@ main
 
     print $ init (tail word) -- was (   ())
     print new
+--    print $ middle "algebra"
+    print (reverse (init ( tail (word ))))
 {- works for lists with 2 or more elements
  easy fix for lists with 1 element (but do later)
    print  $  (last word) ++ (init (tail (word))) --    ++ head word
