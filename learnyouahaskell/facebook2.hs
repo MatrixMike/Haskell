@@ -5,12 +5,18 @@
 word = "another"
 h2 = (head word)
 
-
+-- http://learnyouahaskell.com/higher-order-functions
+-- http://www.cantab.net/users/antoni.diller/haskell/units/unit02.html
 middle :: String -> String
 --check length of input string
-middle s = middle (reverse (init ( tail (word ))))
--- 
+--middle s = middle (reverse (init ( tail (word ))))
+middle    s 
+    | length s <= 3 = word
+    | length s >= 2 = middle (reverse (init ( tail (word ))))
+--    | length s  = 2 = reverse (word)
 
+--middle length s  = 2 = reverse (word)
+--middle length s <= 2 = word
 
 main :: IO ()
 main
@@ -36,8 +42,9 @@ main
 
     print $ init (tail word) -- was (   ())
     print new
---    print $ middle "algebra"
-    print (reverse (init ( tail (word ))))
+    print word
+    print $ middle word
+    print (reverse (init ( tail word )))
 {- works for lists with 2 or more elements
  easy fix for lists with 1 element (but do later)
    print  $  (last word) ++ (init (tail (word))) --    ++ head word
