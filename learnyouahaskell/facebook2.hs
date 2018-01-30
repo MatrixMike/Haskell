@@ -2,7 +2,7 @@
 
 {- see also outputB.hs
 -}
-word = "another"
+word = "anotherLongWord1"
 h2 = (head word)
 
 -- http://learnyouahaskell.com/higher-order-functions
@@ -11,8 +11,10 @@ middle :: String -> String
 --check length of input string
 --middle s = middle (reverse (init ( tail (word ))))
 middle    s 
-    | length s <= 3 = word
-    | length s >= 2 = middle (reverse (init ( tail (word ))))
+    | length s > 2 = middle (reverse (init ( tail (s ))))
+    | (length s) > 1 = reverse s
+    | length s < 2 = s
+
 --    | length s  = 2 = reverse (word)
 
 --middle length s  = 2 = reverse (word)
@@ -43,8 +45,9 @@ main
     print $ init (tail word) -- was (   ())
     print new
     print word
-    print $ middle word
+
     print (reverse (init ( tail word )))
+    print $ middle word
 {- works for lists with 2 or more elements
  easy fix for lists with 1 element (but do later)
    print  $  (last word) ++ (init (tail (word))) --    ++ head word
