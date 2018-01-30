@@ -1,14 +1,14 @@
 module Middlew
   ( middle
   ) where
-middle :: String -> String
+middle :: [Char] -> [Char]
 middle = unwords . map middlep . words  
 
 -- http://learnyouahaskell.com/higher-order-functions
 -- http://www.cantab.net/users/antoni.diller/haskell/units/unit02.html
 --check length of input string
 --middle s = middle (reverse (init ( tail (word ))))
-middlep :: String -> String
+middlep :: [Char] -> [Char]
 middlep    s 
     | (length s) < 3  = (reverse s)
     | length s < 2 = s

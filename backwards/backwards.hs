@@ -9,8 +9,9 @@ main = do
   if null line
     then return ()
     else do
-      putStrLn $ reverseWords line
---    putStrLn $ middle line
+--      putStrLn $ reverseWords line
+    putStrLn $ middle line
+
       main
 {-
 reverseWords :: String -> String
