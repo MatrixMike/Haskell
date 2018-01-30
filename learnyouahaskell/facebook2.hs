@@ -2,8 +2,10 @@
 
 {- see also outputB.hs
 -}
-word = "anotherLongWord1"
-h2 = (head word)
+--word = "anotherLongWord1"
+--word = "abcdefghi"
+word = "about"
+h2 = head word
 
 -- http://learnyouahaskell.com/higher-order-functions
 -- http://www.cantab.net/users/antoni.diller/haskell/units/unit02.html
@@ -11,14 +13,11 @@ middle :: String -> String
 --check length of input string
 --middle s = middle (reverse (init ( tail (word ))))
 middle    s 
-    | length s > 2 = middle (reverse (init ( tail (s ))))
-    | (length s) > 1 = reverse s
+    | (length s) < 3  = (reverse s)
     | length s < 2 = s
+    | length s > 2 = last s :middle (reverse (init ( tail s ))) ++ [head s]
 
---    | length s  = 2 = reverse (word)
 
---middle length s  = 2 = reverse (word)
---middle length s <= 2 = word
 
 main :: IO ()
 main
@@ -30,7 +29,7 @@ main
   -- note output characters or string : elements or list
  = do
 --    let word = "Linux" -- try with own choice of word
-    let h = (head word)
+{-    let h = (head word)
     let t = (tail word)
     let i = (init word)
     let l = (last word)
@@ -47,7 +46,8 @@ main
     print word
 
     print (reverse (init ( tail word )))
-    print $ middle word
+-}
+    print $ reverse (middle word)
 {- works for lists with 2 or more elements
  easy fix for lists with 1 element (but do later)
    print  $  (last word) ++ (init (tail (word))) --    ++ head word
