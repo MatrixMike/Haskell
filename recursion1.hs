@@ -7,7 +7,6 @@ chain n
     | odd  n =  n:chain (n*3 + 1)  
     -- notice the concatenation of an element to a list 
 
-
 main :: IO ()
 main = do
     print $ chain 6

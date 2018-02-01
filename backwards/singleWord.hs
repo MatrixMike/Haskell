@@ -6,7 +6,7 @@ import Middlew
 --word = "anotherLongWord1"
 --word = "abcdefghi"
 word :: [Char]
-word = "aboutmx"    -- "auobt"
+word = "about"    -- "auobt"
 
 h2 :: Char
 h2 = head word
