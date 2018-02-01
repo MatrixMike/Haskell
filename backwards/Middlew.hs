@@ -14,7 +14,7 @@ middle1   =   middlep    --add reverse somehow -- "abcdef" --
 --middle s = middle (reverse (init ( tail (word ))))
 middlep :: String -> String
 middlep    s 
-    | (length s) < 3  = reverse s
+    | length s < 3  = reverse s
     | length s < 2 = s
     | length s > 2 = last s :middlep (reverse (init ( tail s ))) ++ [head s]
 
