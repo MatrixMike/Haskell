@@ -13,9 +13,10 @@ h2 = head word
 
 main :: IO ()
 main = do
-    print $ reverse (middle word)
+{-    print $ reverse (middle word)
     print $ reverse (middle "here")
     print $ reverse (middle "please")
+-}
     putStrLn "starting -> please supply input...on which to perform letter shuffling "
 --    interact (unlines . map middle . lines)
     interact (unlines . map middle . lines)

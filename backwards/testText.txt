@@ -1,2 +1,2 @@
-Here are some words that can be processed by the singleWord App. It needs to show words of lengths from 1 upwards. I think it might work.
+Here are some words that can be processed by the singleWord App . It needs to show words of lengths from 1 upwards . I think it might work .
 
