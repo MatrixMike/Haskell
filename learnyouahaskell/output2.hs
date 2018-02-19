@@ -1,4 +1,8 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
+
+
+import Data.Text
 
 main :: IO()
 main = do
