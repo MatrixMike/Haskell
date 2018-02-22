@@ -51,10 +51,21 @@ remVowelsL c
 isVowel :: Char -> Bool
 isVowel x = x `elem` "aeiou"
 
+isConsonant :: Char -> Bool
+isConsonant x = (x `elem` "aeiou") == False --want the inverse
+
 vowel :: String -> String
 vowel = filter isVowel
+
+consonant :: String -> String
+consonant = filter isConsonant
+
+
+
 
 main :: IO ()
 main = do
   print $ remVowels 'a'
   print $ vowel "The cat sat on the mat"
+  print $ vowel "Hewitt"
+  print $ consonant "Hewitt"
