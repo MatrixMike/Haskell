@@ -13,7 +13,7 @@ main :: IO ()
 main = mapM_ putStrLn $ ((flip center 70 . unwords) . map show) <$> take 16 pascal
 
 -- equivalently, more elaborated
-main' = display $ prettify $ stringify $ take 16 pascal
+main' = display $ prettify $ stringify $ take 18 pascal
     where stringify = (fmap . fmap) show
           prettify = fmap (flip center 40 . unwords)
           display = mapM_ putStrLn
