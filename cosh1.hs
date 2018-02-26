@@ -9,5 +9,5 @@ main = do
     let a = 0.1
     print [cosh x | x <- [0.1, 0.2.. 2.0]]
     putStrLn "xxx"
-    print [catenary a x | x <- [-0.7,-0.6.. 2.0]]
+    print [catenary a x | x <- [-0.7,-0.6.. 0.7]]
 
