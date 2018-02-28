@@ -9,28 +9,28 @@ Lyndon
 ngon
 backwards/backwards
 learnyouahaskell/output9
-zippers/tree1
-	Electronics/VSWR
-	Electronics/resonanceP
-	Pascal
-	SinR
-	Vowel2
-	anonFunc
-	backwards/singleWord
-	bikegears1
-	bikegears2
-	celestrak1
-	conduit1
-	cosh1
-	doubleTest
-	errors
-	formatting
-	hs-flush
-	json1
-	learnyouahaskell/capslocker
-	learnyouahaskell/facebook2
-	learnyouahaskell/guards
-	learnyouahaskell/output5
+zippers/tree
+Electronics/VSWR
+Electronics/resonanceP
+Pascal
+SinR
+Vowel2
+anonFunc
+backwards/singleWord
+bikegears1
+bikegears2
+celestrak1
+conduit1
+cosh1
+doubleTest
+errors
+formatting
+hs-flush
+json1
+learnyouahaskell/capslocker
+learnyouahaskell/facebook2
+learnyouahaskell/guards
+learnyouahaskell/output5
 	learnyouahaskell/output8a
 	learnyouahaskell/outputB
 	listComprehension1
