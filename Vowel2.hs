@@ -1,6 +1,6 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
-
+import Data.ByteString.UTF8 as BSUTF8
 -- 08.10.2017 17:30:47
 -- 11.10.2017 21:36:05
 -- http://learnyouahaskell.com/syntax-in-functions
@@ -34,6 +34,7 @@ remVowels c
   | c == 'i' = 'x'
   | c == 'o' = 'x'
   | c == 'u' = 'x'
+  | c == 'é' = 'x'
   | otherwise = 'z'
 
 remVowelsL :: Char -> Bool
@@ -49,7 +50,7 @@ remVowelsL c
 -- https://stackoverflow.com/questions/46364784/haskell-checking-the-vowels-in-a-string?rq=1
 -- https://en.wikipedia.org/wiki/Vowel_length
 isVowel :: Char -> Bool
-isVowel x = x `elem` "aeiou"
+isVowel x = x `elem` "aeioué"
 
 isConsonant :: Char -> Bool
 isConsonant x = (x `elem` "aeiou") == False --want the inverse
@@ -70,5 +71,6 @@ main = do
   print $ vowel "The cat sat on the mat"
   print $ vowel "Hewitt"
   print $ consonant "Hewitt"
+  print testWord1
   print $ vowel testWord1
   print $ consonant testWord1
