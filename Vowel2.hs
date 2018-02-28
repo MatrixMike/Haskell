@@ -60,7 +60,8 @@ vowel = filter isVowel
 consonant :: String -> String
 consonant = filter isConsonant
 
-
+testWord1 :: [Char]
+testWord1 = "café"
 
 
 main :: IO ()
@@ -69,3 +70,5 @@ main = do
   print $ vowel "The cat sat on the mat"
   print $ vowel "Hewitt"
   print $ consonant "Hewitt"
+  print $ vowel testWord1
+  print $ consonant testWord1
