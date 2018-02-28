@@ -74,3 +74,7 @@ main = do
   print testWord1
   print $ vowel testWord1
   print $ consonant testWord1
+  print $ "\233"
+  print $ "é"
+
+
