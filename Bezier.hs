@@ -42,14 +42,15 @@ bezier u ps =
 -- Draw Bézier as picture
 draw_bezier :: Bezier -> Picture
 draw_bezier ps =
-  let p1 = head ps
-      pn = last ps
+  let p1 = head ps   -- list actions head
+      pn = last ps   -- list actions last
       nsteps = (magV $ pn `subV` p1) / 5 -- ~ 5 pixel steps 
       steps = [0,(min 0.5 (1 / nsteps)) .. 1]
       curve = Color green $ Line $ map (\u -> bezier u ps) steps
-      linear = Color orange $ Line [p1, pn]
+      linear = Color orange $ Line [p1, pn]  --elements from the list 
+      --  try another colour to mid-point between the ends
       outer = Color (greyN 0.75) $ Line ps
-  in pictures [curve, linear, outer]
+  in pictures [curve, linear, outer]  -- as defined in the let above
 
 -- Demo
 b0 = [(0, 0), (0, 100), (250, 200), (180, 0)]
