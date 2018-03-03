@@ -4,9 +4,9 @@ Permission to use, copy, modify, and/or distribute this software for any purpose
 granted, provided that the above copyright notice and this permission notice appear in all copies.
 
 THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING
-ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, 
+ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL,
 DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
-WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE 
+WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE
 USE OR PERFORMANCE OF THIS SOFTWARE. -}
 
 import Graphics.Gloss
@@ -17,24 +17,24 @@ import Control.Applicative ((<$>), (<*>))
 import System.IO (FilePath)
 import Graphics.Gloss.Juicy
 
-{- Chess game between two human players on a single computere. 
-   Game rules is verified durint play, but draw and checkmate is not detected. 
+{- Chess game between two human players on a single computere.
+   Game rules is verified durint play, but draw and checkmate is not detected.
    Compile: ghc -O2 Chess.hs
    Optimize: strip Chess -o ChessStrip
    Run: ./Chess -}
 
-main = do 
+main = do
          let
            boardWidth = 500
            maxTime = 900
          gfx <- loadGraphics
-         play 
+         play
            (InWindow "Haskell Chess" (600, 650) (0,0))
            white
            5
            (initialState maxTime)
            (drawWorld gfx boardWidth)
-           handleEvent 
+           handleEvent
            stepWorld
 
 type BoardWidth = Float
@@ -56,7 +56,7 @@ data State  = State { board :: Board
                     , marker :: Marker
                     , whitePlayer :: Player
                     , blackPlayer :: Player
-                    , current :: PColor 
+                    , current :: PColor
                     , message :: String }
 
 tBlue =  makeColor8  0 102 255 128
@@ -91,20 +91,20 @@ setSelected (Just p) s = if valid then s' else s where
   piece = getPiece p (board s)
   valid = isJust piece && (pcolor (fromJust piece) == current s)
   s' = s { marker = (marker s) { selected = Just p } }
-                           
+
 -- Move pos marker, but make sure move is not outside board
 movePos :: Pos -> SpecialKey -> Pos
-movePos (a,b) KeyLeft  = if (a > 0) then (a-1,b) else (a,b) 
-movePos (a,b) KeyRight = if (a < 7) then (a+1,b) else (a,b) 
-movePos (a,b) KeyUp    = if (b > 0) then (a,b-1) else (a,b) 
-movePos (a,b) KeyDown  = if (b < 7) then (a,b+1) else (a,b) 
+movePos (a,b) KeyLeft  = if (a > 0) then (a-1,b) else (a,b)
+movePos (a,b) KeyRight = if (a < 7) then (a+1,b) else (a,b)
+movePos (a,b) KeyUp    = if (b > 0) then (a,b-1) else (a,b)
+movePos (a,b) KeyDown  = if (b < 7) then (a,b+1) else (a,b)
 movePos p     _        = p
 
 -- Move piece according to marker position if valid move. Assumes that a piece has been selected
 -- This happen when the user has selected a piece and drop it on a new location
 drawPiece :: State -> State
 drawPiece s | (isNothing b') = setMessage "Invalid" $ s
-            | (isCheck s')   = setMessage "Check"   $ s 
+            | (isCheck s')   = setMessage "Check"   $ s
             | otherwise      = setMessage ""        $ stepCurrent s' where
   b = board s
   b' = stepBoard b
@@ -150,11 +150,11 @@ drawPiece s | (isNothing b') = setMessage "Invalid" $ s
                    (ptype piece == King) &&                   -- check that piece is the king
                    (pstate piece == Init) &&                  -- check that king has not moved
                    (isJust $ rook) &&                         -- check that rook has not moved
-                   ((pstate $ fromJust rook) == Init) &&  
+                   ((pstate $ fromJust rook) == Init) &&
                    (fst p1 == 2 || fst p1 == 6)               -- check that target square is correct
 
 -- Get rook move from king move in castling
-castlingRookMove :: (Pos, Pos) -> (Pos, Pos) 
+castlingRookMove :: (Pos, Pos) -> (Pos, Pos)
 castlingRookMove (p0, p1) = let r = snd p0
                             in  if (fst p0 < fst p1) then ((7, r), (5, r))
                                                      else ((0, r), (3, r))
@@ -199,13 +199,13 @@ isCheck :: State -> Bool
 isCheck s = not $ Map.null checkers where
   b = board s
   c = current s
-  kingPos = head $ Map.keys $ Map.filter (\p -> ((ptype $ p) == King) && 
+  kingPos = head $ Map.keys $ Map.filter (\p -> ((ptype $ p) == King) &&
                                                 ((pcolor $ p) == c)) $ b
   checkers = Map.filterWithKey (\checkerPos p -> (pcolor p /= c) &&
                                                  (pathClear b checkerPos kingPos p) &&
                                                  (validCapture p checkerPos kingPos)) $ b
 
--- Change current player and clear marker and 
+-- Change current player and clear marker and
 stepCurrent :: State -> State
 stepCurrent s = s { marker = (marker s) { selected = Nothing }
                  , current = opposite (current s) }
@@ -217,28 +217,28 @@ promotePiece new p = p { ptype = new }
 
 -- Draw the scene
 drawWorld :: [Picture] -> BoardWidth -> State -> Picture
-drawWorld gfx bw s = 
+drawWorld gfx bw s =
     translate (-bw*0.5) (-bw*0.55) $ pictures $ [ drawBoard bw
                                    , drawPieces bw gfx (board s)
                                    , drawMarker bw (marker s)
                                    , drawSelected bw (marker s)
                                    , drawState bw s ]
 
--- Draw board with bottom left corner in origo 
+-- Draw board with bottom left corner in origo
 drawBoard :: BoardWidth -> Picture
-drawBoard w = 
+drawBoard w =
     let
       tup a b = (a,b)
       sqAt (c,r) = translate c r $ rectangleSolid 1 1
       squares = (tup <$> [0,2,4,6] <*> [0,2,4,6]) ++ (tup <$> [1,3,5,7] <*> [1,3,5,7])
       border = translate 3.5 3.5 $ rectangleWire 8 8
       blackSquares = map sqAt squares
-    in 
+    in
       color (greyN 0.5) $ scale (w/8) (w/8) $ translate 0.5 0.5 $ pictures $ (border : blackSquares)
 
 drawPieces :: BoardWidth -> [Picture] -> Board -> Picture
-drawPieces bw gfx b = 
-    translate (bw/16) (bw/16) $ pictures $ Map.elems $ Map.mapWithKey (\pos p -> toPic pos p) b 
+drawPieces bw gfx b =
+    translate (bw/16) (bw/16) $ pictures $ Map.elems $ Map.mapWithKey (\pos p -> toPic pos p) b
     where
       toPic :: Pos -> Piece -> Picture
       toPic pos p = let (tx, ty) = translatePos bw $ pos
@@ -264,16 +264,16 @@ translatePos bw (c, r) = ((bw/8)*fromIntegral c, (bw/8)*fromIntegral (7-r))
 
 -- Draw current player state
 drawState :: BoardWidth -> State -> Picture
-drawState bw s = 
+drawState bw s =
     let
       col = case (current s) of Black -> black
-                                White -> white  
-      pCurrent = translate (0.5*bw) (1.1*bw) 
+                                White -> white
+      pCurrent = translate (0.5*bw) (1.1*bw)
                    $ pictures [ color col $ rectangleSolid (bw/16) (bw/16)
                               , color black $ rectangleWire (bw/16) (bw/16) ]
       tWhite = round (timeLeft . whitePlayer $ s)
       tBlack = round (timeLeft . blackPlayer $ s)
-      pWhite = color (timeColor tWhite) 
+      pWhite = color (timeColor tWhite)
                  $ translate (0.3*bw) (1.075*bw) $ scale 0.2 0.2
                  $ text $ secFormatted $ tWhite
       pBlack = color (timeColor tBlack)
@@ -331,11 +331,11 @@ gfxFiles = map (("gfx/"++) . (++"50.png")) $ (map (++"b") fs) ++ (map (++"w") fs
            fs = ["k","r","b","q","n","p"]
 
 pieceGfx :: [Picture] -> Piece -> Picture
-pieceGfx gfx (Piece t c _) = 
-    let 
+pieceGfx gfx (Piece t c _) =
+    let
       ts = [ King, Rook, Bishop, Queen, Knight, Pawn ]
       color c t = Piece t c Init
       pieces = map (color Black) ts ++ map (color White) ts
       pic = lookup (Piece t c Init) $ zip pieces gfx
     in
-      maybe Blank id pic 
+      maybe Blank id pic
