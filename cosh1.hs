@@ -1,7 +1,7 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 
-
---catenary :: 
-catenary a x = a * cosh ( x / a ) 
+catenary :: Floating a => a -> a -> a
+catenary a x = a * cosh ( x / a )
 
 
 main :: IO()

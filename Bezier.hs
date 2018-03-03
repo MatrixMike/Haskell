@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 -- http://www.lounge.se/wiki2/show/BezierCurves
 module Main
   ( main
@@ -16,8 +17,8 @@ type Bezier = [Point] -- A linear, quadratic, cubic or higher order Bézier line
                         -- E.g. [P1, P2] (linear) or [P1, P2, P3, P4] (cubic)
 
 -- Helpers
-addV :: Vector -> Vector -> Vector
-addV (a, b) (c, d) = (a + c, b + d)
+--addV :: Vector -> Vector -> Vector
+--addV (a, b) (c, d) = (a + c, b + d)   -- not needed yet
 
 subV :: Vector -> Vector -> Vector
 subV (a, b) (c, d) = (a - c, b - d)
@@ -44,16 +45,22 @@ drawBezier :: Bezier -> Picture
 drawBezier ps =
   let p1 = head ps   -- list actions head
       pn = last ps   -- list actions last
-      nsteps = magV ( pn `subV` p1) / 5 -- ~ 5 pixel steps
-      steps = [0,(min 0.5 (1 / nsteps)) .. 1]
-      curve = Color green $ Line $ map (`bezier` ps) steps   -- was (\u -> bezier u ps) , now
-      linear = Color orange $ Line [p1, pn]  --elements from the list
-      --  try another colour to mid-point between the ends
-      outer = Color (greyN 0.75) $ Line ps
-  in pictures [curve, linear, outer]  -- as defined in the let above
+      nsteps  = magV ( pn `subV` p1) / 5 -- ~ 5 pixel steps
+      steps   = [0,(min 0.5 (1 / nsteps)) .. 1]
+      curve   = Color green $ Line $ map (`bezier` ps) steps   -- was (\u -> bezier u ps) , now
+      linear  = Color red $ Line [p1, pn]  --elements from the list
+      linear1 = Color red $ Line [p1, pn]  --elements from the list
+            --  try another colour to mid-point between the ends
+      outer  = Color (greyN 0.75) $ Line ps
+      outer1 = Color (greyN 0.75) $ Line ps
+      -- pictures seems to take variable number of parameters
+  in pictures [curve, linear, outer, outer1, linear1]  -- as defined in the let above
 
 -- Demo
-b0 = [(0, 0), (0, 100), (250, 200), (180, 0)]
+--b0 :: [(Integer, Integer)]
+b0 = [(0, 0), (0,  100), (250,  200), (180, 0)]
+
+--b1 :: [(Integer, Integer)]
 b1 = [(0, 0), (0, -100), (250, -200), (180, 0)]
 
 
@@ -67,4 +74,4 @@ main = do
     (InWindow "Bézier" (600, 600) (100, 100))
     white -- background
     (drawBezier b1 )
-
+--    (drawBezier b0)
