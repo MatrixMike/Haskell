@@ -53,14 +53,15 @@ drawBezier ps =
             --  try another colour to mid-point between the ends
       outer  = Color (greyN 0.75) $ Line ps
       outer1 = Color (greyN 0.75) $ Line ps
+      outer2 = Color (greyN 0.75) $ Line [(0, 0), (0,100),(100,  100), (250,  200), (180, 0)]
       -- pictures seems to take variable number of parameters
-  in pictures [curve, linear, outer, outer1, linear1]  -- as defined in the let above
+  in pictures [curve, linear, outer, outer1, linear1, outer2]  -- as defined in the let above
 
 -- Demo
---b0 :: [(Integer, Integer)]
+b0 :: [(Float,Float)]
 b0 = [(0, 0), (0,  100), (250,  200), (180, 0)]
 
---b1 :: [(Integer, Integer)]
+b1 :: [(Float,Float)]
 b1 = [(0, 0), (0, -100), (250, -200), (180, 0)]
 
 
@@ -72,6 +73,6 @@ main = do
 -}
   display
     (InWindow "Bézier" (600, 600) (100, 100))
-    white -- background
+    yellow -- background
     (drawBezier b1 )
 --    (drawBezier b0)

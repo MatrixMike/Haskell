@@ -2,13 +2,26 @@
 -- http://www.lounge.se/wiki2/show/HaskellChess
 
 import Graphics.Gloss
-import Graphics.Gloss.Data.Vector
-import Data.List
+--import Graphics.Gloss.Data.Vector
+--import Data.List
+--import Graphics.Gloss.Juicy
+--import Graphics.Gloss.Interface.Pure.Game
+
+--tBlue =  makeColor8  0 102 255 128
+--tGreen = makeColor8 51 255   0 128
+textString :: [Char]
+--textString = "TeéxtString"
+textString = "Coffee time Phyllis"
 
 main :: IO ()
-main = display (InWindow "Hello World" (400, 150) (10, 10)) white picture
+main = do
+
+    display (InWindow "Heéllo World" (400, 150) (100, 20)) green picture  -- easily change background colour
+-- dimensions of box , location of top left corner y,x (a.o.t. x,y !)
 
 picture :: Picture
 picture = Translate (-170) (-20)   -- shift the text to the middle of the window
-    $ Scale 0.5 0.5                -- display it half the original size
-    $ Text "Hello World"           -- text to display
+--    $ Text "World\nTwo"           -- text to display
+--   let      secFormatted s = show (s `div` 60) ++ ":" ++ show (s `mod` 60)
+    $ Scale 0.25 0.25                -- display it half the original size
+    $ Text textString          -- text to display
