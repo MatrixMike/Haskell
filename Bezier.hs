@@ -57,9 +57,10 @@ drawBezier ps =
       outer1 = Color (greyN 0.75) $ Line ps
       outer2 = Color (greyN 0.75) $ Line [(0, 0), (0,100),(100,  100), (250,  200), (180, 0)]
       circ   = Color (violet) $ ThickCircle 5 120
+--      scale1 = Scale 0.25 0.25
       text1  = Color (red) $ text "some text"
       -- pictures seems to take variable number of parameters
-  in pictures [curve, linear, outer, outer1, linear1, outer2, circ]  -- as defined in the let above
+  in pictures [curve, linear, outer, outer1, linear1, outer2, circ,  text1]  -- as defined in the let above
 
 -- Demo
 b0 :: [(Float,Float)]
