@@ -1,5 +1,6 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 -- http://www.lounge.se/wiki2/show/BezierCurves
+-- http://hackage.haskell.org/package/gloss-1.8.0.1/docs/Graphics-Gloss.html
 module Main
   ( main
   ) where
@@ -7,6 +8,7 @@ module Main
 import Data.List
 import Graphics.Gloss
 import Graphics.Gloss.Data.Vector
+import Graphics.Gloss.Data.Picture
 
 {- Bezier curve approximation
    See: http://en.wikipedia.org/wiki/B%C3%A9zier_curve
@@ -54,8 +56,10 @@ drawBezier ps =
       outer  = Color (greyN 0.75) $ Line ps
       outer1 = Color (greyN 0.75) $ Line ps
       outer2 = Color (greyN 0.75) $ Line [(0, 0), (0,100),(100,  100), (250,  200), (180, 0)]
+      circ   = Color (violet) $ ThickCircle 5 120
+      text1  = Color (red) $ text "some text"
       -- pictures seems to take variable number of parameters
-  in pictures [curve, linear, outer, outer1, linear1, outer2]  -- as defined in the let above
+  in pictures [curve, linear, outer, outer1, linear1, outer2, circ]  -- as defined in the let above
 
 -- Demo
 b0 :: [(Float,Float)]
@@ -65,6 +69,7 @@ b1 :: [(Float,Float)]
 b1 = [(0, 0), (0, -100), (250, -200), (180, 0)]
 
 
+main :: IO ()
 main = do
 {-  display
     (InWindow "Bézier" (600, 600) (100, 100))
