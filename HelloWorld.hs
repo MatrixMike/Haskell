@@ -20,13 +20,18 @@ textString = "Coffee time Phyllis"
 
 main :: IO ()
 main = do
-
+    putStrLn newCString
     display (InWindow newCString (400, 150) (100, 20)) green picture  -- easily change background colour
 -- dimensions of box , location of top left corner y,x (a.o.t. x,y !)
+
+
 
 picture :: Picture
 picture = Translate (-170) (-20)   -- shift the text to the middle of the window
 --    $ Text "World\nTwo"           -- text to display
 --   let      secFormatted s = show (s `div` 60) ++ ":" ++ show (s `mod` 60)
     $ Scale 0.25 0.25                -- display it half the original size
-    $ Text textString          -- text to display
+    $ Text newCString          -- text to display
+
+
+
