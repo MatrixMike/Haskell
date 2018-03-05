@@ -15,7 +15,7 @@ import Data.Maybe (maybe, catMaybes, fromJust, isJust, isNothing)
 import qualified Data.Map.Strict as Map
 import Control.Applicative ((<$>), (<*>))
 import System.IO (FilePath)
-import Graphics.Gloss.Juicy
+--import Graphics.Gloss.Juicy
 
 {- Chess game between two human players on a single computere.
    Game rules is verified durint play, but draw and checkmate is not detected.
