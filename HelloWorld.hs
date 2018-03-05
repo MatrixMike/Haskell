@@ -6,9 +6,14 @@ import Graphics.Gloss
 --import Data.List
 --import Graphics.Gloss.Juicy
 --import Graphics.Gloss.Interface.Pure.Game
+import qualified Foreign.C.String as String
+
+newCString :: String
+newCString = "Testé"
 
 --tBlue =  makeColor8  0 102 255 128
 --tGreen = makeColor8 51 255   0 128
+
 textString :: [Char]
 --textString = "TeéxtString"
 textString = "Coffee time Phyllis"
@@ -16,7 +21,7 @@ textString = "Coffee time Phyllis"
 main :: IO ()
 main = do
 
-    display (InWindow "Heéllo World" (400, 150) (100, 20)) green picture  -- easily change background colour
+    display (InWindow newCString (400, 150) (100, 20)) green picture  -- easily change background colour
 -- dimensions of box , location of top left corner y,x (a.o.t. x,y !)
 
 picture :: Picture

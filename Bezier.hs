@@ -1,4 +1,5 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
+
 -- http://www.lounge.se/wiki2/show/BezierCurves
 -- http://hackage.haskell.org/package/gloss-1.8.0.1/docs/Graphics-Gloss.html
 module Main
@@ -7,8 +8,8 @@ module Main
 
 import Data.List
 import Graphics.Gloss
-import Graphics.Gloss.Data.Vector
 import Graphics.Gloss.Data.Picture
+import Graphics.Gloss.Data.Vector
 
 {- Bezier curve approximation
    See: http://en.wikipedia.org/wiki/B%C3%A9zier_curve
@@ -21,7 +22,6 @@ type Bezier = [Point] -- A linear, quadratic, cubic or higher order Bézier line
 -- Helpers
 --addV :: Vector -> Vector -> Vector
 --addV (a, b) (c, d) = (a + c, b + d)   -- not needed yet
-
 subV :: Vector -> Vector -> Vector
 subV (a, b) (c, d) = (a - c, b - d)
 
@@ -42,43 +42,50 @@ bezier u ps =
   let pairs = map listify $ makePairs ps -- quadratic or higher
   in bezier u $ map (bezier u) pairs
 
+--text1 :: Picture
+--text1 = Color (red) $ text "some text"
+
 -- Draw Bézier as picture
 drawBezier :: Bezier -> Picture
 drawBezier ps =
-  let p1 = head ps   -- list actions head
-      pn = last ps   -- list actions last
-      nsteps  = magV ( pn `subV` p1) / 5 -- ~ 5 pixel steps
-      steps   = [0,(min 0.5 (1 / nsteps)) .. 1]
-      curve   = Color green $ Line $ map (`bezier` ps) steps   -- was (\u -> bezier u ps) , now
-      linear  = Color red $ Line [p1, pn]  --elements from the list
-      linear1 = Color red $ Line [p1, pn]  --elements from the list
+  let p1 = head ps -- list actions head
+      pn = last ps -- list actions last
+      nsteps = magV (pn `subV` p1) / 5 -- ~ 5 pixel steps
+      steps = [0,(min 0.5 (1 / nsteps)) .. 1]
+      curve = Color green $ Line $ map (`bezier` ps) steps -- was (\u -> bezier u ps) , now
+      linear = Color red $ Line [p1, pn] --elements from the list
+      linear1 = Color red $ Line [p1, pn] --elements from the list
             --  try another colour to mid-point between the ends
-      outer  = Color (greyN 0.75) $ Line ps
+      outer = Color (greyN 0.75) $ Line ps
       outer1 = Color (greyN 0.75) $ Line ps
-      outer2 = Color (greyN 0.75) $ Line [(0, 0), (0,100),(100,  100), (250,  200), (180, 0)]
-      circ   = Color (violet) $ ThickCircle 5 120
---      scale1 = Scale 0.25 0.25
-      text1  = Color (red) $ text "some text"
+      outer2 =
+        Color (greyN 0.75) $
+        Line [(0, 0), (0, 100), (100, 100), (250, 200), (180, 0)]
+      circ = Color (violet) $ ThickCircle 2 220
+      text1 :: Picture
+      text1 = Color (red) $ text "some text"
+      scale = Scale 0.25 0.25
       -- pictures seems to take variable number of parameters
-  in pictures [curve, linear, outer, outer1, linear1, outer2, circ,  text1]  -- as defined in the let above
+  in pictures [curve, linear, outer, outer1, linear1, outer2, circ, text1] -- as defined in the let above
 
+--      scale1 = Scale 0.25 0.25
 -- Demo
-b0 :: [(Float,Float)]
-b0 = [(0, 0), (0,  100), (250,  200), (180, 0)]
+b0 :: [(Float, Float)]
+b0 = [(0, 0), (0, 100), (250, 200), (180, 0)]
 
-b1 :: [(Float,Float)]
+b1 :: [(Float, Float)]
 b1 = [(0, 0), (0, -100), (250, -200), (180, 0)]
 
-
 main :: IO ()
-main = do
+main
 {-  display
     (InWindow "Bézier" (600, 600) (100, 100))
     white -- background
     (draw_bezier b0)
 -}
+ = do
   display
     (InWindow "Bézier" (600, 600) (100, 100))
     yellow -- background
-    (drawBezier b1 )
+    (drawBezier b1)
 --    (drawBezier b0)
