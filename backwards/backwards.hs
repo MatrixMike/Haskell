@@ -12,7 +12,7 @@ main = do
 --      putStrLn $ reverseWords line
     putStrLn $ middle line
 
-      main
+  main
 {-
 reverseWords :: String -> String
 reverseWords = unwords . map reverse . words
