@@ -1,5 +1,5 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
-
+-- 04.03.2018 13:05:00
 catenary :: Floating a => a -> a -> a
 catenary a x = a * cosh ( x / a )
 
