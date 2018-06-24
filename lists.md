@@ -4,7 +4,7 @@ Element Head  Init
 </li><li>
 Element Tail  Init
 </li><li>
-Element Tail  Init<
+Element Tail  Init
 </li><li>
 Element Tail  Init
 </li><li>
