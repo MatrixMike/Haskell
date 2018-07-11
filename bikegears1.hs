@@ -12,9 +12,9 @@ not sure what is going on here (yet)
 import Bglib
 import DoubleTest
 import Reversew
-import Vowel2 
+--import Vowel2 
 import Collision
--- import SinR   -- I changed SinR from a module to a main
+--import SinR   -- I changed SinR from a module to a main
 
 f1 :: [Double]
 f1 = [42, 52]
