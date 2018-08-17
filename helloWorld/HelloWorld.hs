@@ -1,6 +1,8 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 -- http://www.lounge.se/wiki2/show/HaskellChess
 
+--needs:  cabal install Gloss
+
 import Graphics.Gloss
 --import Graphics.Gloss.Data.Vector
 --import Data.List
