@@ -11,7 +11,7 @@ import Graphics.Gloss
 import qualified Foreign.C.String as String
 
 newCString :: String
-newCString = "Testé"
+newCString = "1Testé"
 
 --tBlue =  makeColor8  0 102 255 128
 --tGreen = makeColor8 51 255   0 128
@@ -22,6 +22,7 @@ textString = "Coffee time Phyllis"
 
 main :: IO ()
 main = do
+    let newCString = "TeéxtString"
     putStrLn newCString
     display (InWindow newCString (400, 150) (100, 20)) green picture  -- easily change background colour
 -- dimensions of box , location of top left corner y,x (a.o.t. x,y !)
