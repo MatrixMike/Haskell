@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fwarn-missing-signatures #-}
+
 -- http://www.lounge.se/wiki2/show/BezierCurves
 module Main
   ( main

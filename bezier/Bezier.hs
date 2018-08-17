@@ -2,9 +2,11 @@
 
 -- http://www.lounge.se/wiki2/show/BezierCurves
 -- http://hackage.haskell.org/package/gloss-1.8.0.1/docs/Graphics-Gloss.html
+{-
 module Main
   ( main
   ) where
+-}
 
 import Data.List
 import Graphics.Gloss
