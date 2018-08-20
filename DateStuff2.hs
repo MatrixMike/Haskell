@@ -1,12 +1,36 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Data.Time.Calendar
 import Data.Time.Calendar.WeekDate
 import Data.Char
+
+{-do
+   now <- getCurrentTime
+   timezone <- getCurrentTimeZone
+   
+let zoneNow  = utcToLocalTime timezone now
+--let zoneNow2 = utcToZonedTime timezone now
+let (year, month, day) = toGregorian $ localDay zoneNow
+-}
+
+year :: Integer
 year=2014
+
+month :: Int
 month=2
+
+months :: [[Char]]
 months=["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"]
+
+mnth :: [Char]
 mnth=months!!(month-1)
+
+monthDate :: (Int,Int)
 monthDate = getDaysInMonth year month
+
+startAt :: Int
 startAt=snd(monthDate)
+
+totalDays :: Int
 totalDays = fst(monthDate)
 
 getDaysInMonth year month=(nDays,sDay) 

@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 --https://stackoverflow.com/questions/27750952/generate-calendar-of-a-given-month-and-year-in-haskell
 
 import Data.Time.Clock
@@ -9,8 +10,12 @@ import Data.Char
 getDaysInMonth year month=(nDays,sDay) 
                           where nDays = gregorianMonthLength year month
                                 sDay= digitToInt(last(showWeekDate (fromGregorian year month 01)))
+year :: Integer
 year=2013
+
+month :: Int
 month=10
+
 months=["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"]
 mnth=months!!(month-1)
 monthDate = getDaysInMonth year month
@@ -26,5 +31,6 @@ generateCalendar=printLine++"\n "++
                         concat [[r]++"\t|" | r <- mnth]++printLine++
                         "\n Sun\t|Mon\t|Tue\t|Wed\t|Thu\t|Fri\t|Sat"++printLine++
                         genD 1
+main :: IO ()
 main=do
      putStrLn generateCalendar
