@@ -19,8 +19,9 @@ main = do
     putStrLn $ "Year: " ++ show year
     putStrLn $ "Month: " ++ show month
     putStrLn $ "Day: " ++ show day
---    putStrLn $ "Day: " ++ show day
---   putStrLn $ now
-    
+--    putStrLn $ "tz" ++ timezone   
 --    putStrLn $ "WeekDate" ++ show swd
+--    putStrLn $ now
+    
+
     
