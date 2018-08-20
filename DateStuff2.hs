@@ -18,7 +18,7 @@ year=2014
 month :: Int
 month=2
 
-months :: [[Char]]
+months :: [String]
 months=["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"]
 
 mnth :: [Char]
