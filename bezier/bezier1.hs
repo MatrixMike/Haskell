@@ -40,9 +40,9 @@ bezier u ps         = let pairs = map listify $ make_pairs ps   -- quadratic or 
                       in  bezier u $ map (bezier u) pairs
 
 -- Draw Bézier as picture
-draw_bezier :: Bezier -> Picture
-draw_bezier ps = let p1 = head ps
-                     pn = last ps
+drawBezier :: Bezier -> Picture
+drawBezier ps = let p1 = head ps
+                let pn = last ps
                      nsteps = magV ( pn `subV` p1) / 5           -- ~ 5 pixel steps
                      steps = [0, (min 0.5 (1/nsteps)) .. 1]
                      curve = Color green $ Line $ map (`bezier` ps) steps

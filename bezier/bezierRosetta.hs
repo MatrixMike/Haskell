@@ -2,8 +2,8 @@
     FlexibleInstances, TypeSynonymInstances,
     ViewPatterns #-}
  
-import Bitmap
-import Bitmap.Line
+--import Bitmap
+--import Bitmap.Line
 import Control.Monad
 import Control.Monad.ST
  
