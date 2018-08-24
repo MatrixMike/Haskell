@@ -1,23 +1,29 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
-import Data.Time.Calendar
-import Data.Time.Calendar.WeekDate
-import Data.Char
 import Months
 
 --year = 2017
 --getDaysInMonth :: Integer -> Integer -> Integer
-year = 2017
 
-month1 = 6
+--year :: Integer
+--year=2017
+
+month1 :: Integer
+month1=5
    
-monthDate = getDaysInMonth Months.year Months.month
-
+monInt :: Int
+monInt = 9
+   
 main :: IO ()
 main = do
     print $ months !!(3-1)
-    print $ Months.year
+--    print $ Months.year
     print $ month1
-    print $ monthDate
+    print $ month
+    print $   Main.monInt  -- sources of monInt : local is Main.
+    print $ Months.monInt  -- sources of monInt
+--    print $ monthDate
+    print $ year
+    
     
     
     
