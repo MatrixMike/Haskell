@@ -5,7 +5,8 @@ module Months
     months,
     year,
     month,
-    monInt
+    monInt,
+    monthDate
     )
     where
     
@@ -16,7 +17,7 @@ import Data.Char
 months :: [String]
 months=["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"]
 
-year :: Int
+year :: Integer
 year=2017
 
 month :: Int
@@ -29,7 +30,8 @@ getDaysInMonth year month=(nDays,sDay)
 monInt :: Int
 monInt = 10
 
---monthDate = getDaysInMonth year month
+monthDate :: (Int, Int)
+monthDate = getDaysInMonth year month
 
 --monthDate :: (Int, Int)
 --monthDate = getDaysInMonth year month

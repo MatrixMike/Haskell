@@ -7,7 +7,7 @@ import Months
 --year :: Integer
 --year=2017
 
-month1 :: Integer
+month1 :: Int
 month1=5
    
 monInt :: Int
@@ -21,7 +21,7 @@ main = do
     print $ month
     print $   Main.monInt  -- sources of monInt : local is Main.
     print $ Months.monInt  -- sources of monInt
---    print $ monthDate
+    print $ monthDate
     print $ year
     
     
