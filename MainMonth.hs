@@ -21,6 +21,9 @@ main = do
     print $ month
     print $   Main.monInt  -- sources of monInt : local is Main.
     print $ Months.monInt  -- sources of monInt
+    print "space"
+    print $ Months.year -- ++ Months.month
+    print $ Months.month
     print $ monthDate
     print $ year
     

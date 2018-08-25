@@ -18,10 +18,10 @@ months :: [String]
 months=["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"]
 
 year :: Integer
-year=2017
+year=2018
 
 month :: Int
-month=2
+month=8
 
 getDaysInMonth :: Integer -> Int -> (Int, Int)
 getDaysInMonth year month=(nDays,sDay) 
@@ -31,7 +31,7 @@ monInt :: Int
 monInt = 10
 
 monthDate :: (Int, Int)
-monthDate = getDaysInMonth year month
+monthDate = getDaysInMonth Months.year Months.month
 
 --monthDate :: (Int, Int)
 --monthDate = getDaysInMonth year month
