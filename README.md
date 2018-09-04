@@ -7,3 +7,6 @@ Here are some fragments of my code and support sources for my saving and testing
 
 Using a lot of "stack exec -- ghc --make test2.hs"
 
+https://wiki.haskell.org/Literate_programming   : literate programming
+
+

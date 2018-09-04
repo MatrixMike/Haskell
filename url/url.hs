@@ -9,7 +9,9 @@ https://hackage.haskell.org/package/network-uri
 main
 --  let s = "postgres://user:pass@host.com:5432/path?k=v#f"
  = do
-  let s = "postgres://mike:pass@host.com:1234/path?k=v#f"
+  let s = "https://www.leiningen.org/#install"
+  let s = "postgres://user:pass@host.com:5432/path?k=v#f"
+--  let s = "mikeh@192.168.0.21:/home/mikeh/"      causes url: no URI
   case parseURI s of
     Nothing -> error "no URI"
     Just uri -> do

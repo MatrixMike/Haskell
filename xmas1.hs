@@ -1,5 +1,3 @@
-
-
 main :: IO ()
 main = do
     print  [   x <- [12,11..1]  ]
