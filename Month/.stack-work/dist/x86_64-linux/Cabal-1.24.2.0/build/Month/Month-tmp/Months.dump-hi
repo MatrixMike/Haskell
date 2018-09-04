@@ -1,0 +1,231 @@
+
+==================== FINAL INTERFACE ====================
+2018-09-04 11:54:24.633022 UTC
+
+interface main@main:Months 8002
+  interface hash: f329a760f3d332ceca98c93a9bcf3510
+  ABI hash: 1e78d5fd7c9657b17cab3a562bd5f5a7
+  export-list hash: aeea006941cd7a1998c25470cb7a9eed
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: a45510018c06a006e3d55829fb20ecfb
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Months.monInt
+  Months.month
+  Months.monthDate
+  Months.months
+  Months.year
+module dependencies:
+package dependencies: array-0.5.1.1@array-0.5.1.1 base-4.9.1.0*
+                      deepseq-1.4.2.0@deepseq-1.4.2.0 ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1 time-1.6.0.1@time-1.6.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian
+         time-1.6.0.1@time-1.6.0.1:Data.Time.Format.Parse
+         time-1.6.0.1@time-1.6.0.1:Data.Time.LocalTime.LocalTime
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Complex base-4.9.1.0:Data.Either
+                         base-4.9.1.0:Data.Functor.Const base-4.9.1.0:Data.Functor.Identity
+                         base-4.9.1.0:Data.List.NonEmpty base-4.9.1.0:Data.Monoid
+                         base-4.9.1.0:Data.Semigroup base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:Data.Version base-4.9.1.0:Data.Void
+                         base-4.9.1.0:GHC.Exts base-4.9.1.0:GHC.Generics
+                         base-4.9.1.0:GHC.IO.Exception base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Char 01433d23661edb6e5ef1536ef1e6774c
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  integer-gmp-1.0.0.1:GHC.Integer.Type 318df275d77dcdb18e0006d8d7870c2a
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar bd15013b1ee55495227e28faaf2d77db
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.Gregorian 04a8b2fb0c663c25de5cf9d7024d8458
+import  -/  time-1.6.0.1@time-1.6.0.1:Data.Time.Calendar.WeekDate f16469490ac61126beeb3e627ca93d42
+ef39dc7f0b5f686a53395f35de961f6f
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Months.$trModule2
+                   Months.$trModule1) -}
+ca740477c177790f7b639288290b48f1
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Months"#) -}
+e43f09155618b1a30281d1545e14e42d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+19a4a8c4de41b7b77672fc1bebd8ef99
+  monInt :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 10#) -}
+f6672cc66551cb9cd84f776ca91b42bf
+  month :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 8#) -}
+6f400796a8764277effabe50a9d798e3
+  monthDate :: (GHC.Types.Int, GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Months.monthDate5, Months.monthDate1)) -}
+cef32a9dd57845b676d0dd57d7b5ea68
+  monthDate1 :: GHC.Types.Int
+  {- Unfolding: (case Months.monthDate_go
+                        Months.monthDate2
+                        (GHC.List.lastError @ GHC.Types.Char) of ww { GHC.Types.C# ww1 ->
+                 case Data.Char.$wdigitToInt ww1 of ww2 { DEFAULT ->
+                 GHC.Types.I# ww2 } }) -}
+4262e1003bb196704a83df07c2ef5daa
+  monthDate2 :: GHC.Base.String
+  {- Unfolding: (Data.Time.Calendar.WeekDate.showWeekDate
+                   Months.monthDate3) -}
+9f33cc66536c763a4878d7b63d9451a6
+  monthDate3 :: Data.Time.Calendar.Days.Day
+  {- Unfolding: (case Data.Time.Calendar.MonthDay.$wmonthAndDayToDayOfYear
+                        Months.monthDate4
+                        8#
+                        1# of ww4 { DEFAULT ->
+                 Data.Time.Calendar.OrdinalDate.$wfromOrdinalDate
+                   Months.year
+                   ww4 }) -}
+0c0e9ab5b943ed2b2b1afb8357a47dd3
+  monthDate4 :: GHC.Types.Bool
+  {- Unfolding: (Data.Time.Calendar.OrdinalDate.isLeapYear
+                   Months.year) -}
+ef6aad52429c61d85519a77dd25c87d1
+  monthDate5 :: GHC.Types.Int
+  {- Unfolding: (Data.Time.Calendar.MonthDay.$wmonthLength
+                   Months.monthDate4
+                   8#) -}
+79863f976279991c2215c52a58e14dda
+  monthDate_go ::
+    [GHC.Types.Char] -> GHC.Types.Char -> GHC.Types.Char
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U(U)> -}
+542c7a8b2c8ec1dd807203efc1451397
+  months :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Months.months23
+                   Months.months1) -}
+0f2930ed6afb41b5021790b507064e7d
+  months1 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Months.months22
+                   Months.months2) -}
+16eea65d2cdf955eb1b34cfe02fa0fee
+  months10 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Months.months13
+                   Months.months11) -}
+211360e38499964a749ce08086c4bda7
+  months11 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Months.months12
+                   (GHC.Types.[] @ GHC.Base.String)) -}
+fe975354f463cc86c39ec18cc76ef766
+  months12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "DECEMBER"#) -}
+15bcc86620d2636db1c7be4b73f569c2
+  months13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "NOVEMBER"#) -}
+1ab929885f4dabd815d8a4e92ddf5031
+  months14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "OCTOBER"#) -}
+99f75a4fcf69db3be59a42e156e2a5d1
+  months15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "SEPTEMBER"#) -}
+7fe45455ec9d6fa8812aa0c253dc2b85
+  months16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "AUGUST"#) -}
+647f09740fbef718237a72f4d087e650
+  months17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "JULY"#) -}
+40568d6c98796b22b9c3fbe1057cecc3
+  months18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "JUNE"#) -}
+91bd7eeddbdcacbfd9d60afaf6f60daf
+  months19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "MAY"#) -}
+51b595664e6a0d4542fb549478e48b8f
+  months2 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Months.months21
+                   Months.months3) -}
+c9f7ff6427dc52791eb73952eed27148
+  months20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "APRIL"#) -}
+cf298761351c18b84d31162fcb772689
+  months21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "MARCH"#) -}
+54ec86ec09c4cea3eab9408008ee3b62
+  months22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "FEBRUARY"#) -}
+c43bd53116ce102306e26d9fd4d94ef9
+  months23 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "JANUARY"#) -}
+c003855e9124eda74440316f20d99ab9
+  months3 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Months.months20
+                   Months.months4) -}
+0e4ae81a603409fd5b737dba07cb24b9
+  months4 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Months.months19
+                   Months.months5) -}
+502798a9ca3220947374b49c843038ea
+  months5 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Months.months18
+                   Months.months6) -}
+c8ddc5f2e92519d97caf9d590649686e
+  months6 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Months.months17
+                   Months.months7) -}
+856a385d047079eb4177a90ba0d09922
+  months7 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Months.months16
+                   Months.months8) -}
+cc1701afa86531cbd4f86202f1d3b440
+  months8 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Months.months15
+                   Months.months9) -}
+ccb876343a87c9cc49c358fdbd4b7220
+  months9 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Months.months14
+                   Months.months10) -}
+b1eb776dae5fca34a3eb18b0d6441afd
+  year :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (2018) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
