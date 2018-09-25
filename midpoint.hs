@@ -52,6 +52,6 @@ main = do
     print points
     print ps
     print $ midpointN (1.0,2.0) (2.0,3.0)
-    
+    print $ midpointN p1 p2   
     
 --    print $ lineD p1
