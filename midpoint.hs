@@ -32,7 +32,7 @@ midpointN a b = ((fst a + fst b)/2.0, (snd a + snd b)/2.0)
 type Parametric a = Float -> a -- a value that varies over time
 -- linear interpolation between two numbers, from t=0 to t=1
 line1d :: Float -> Float -> Parametric Float
-line1d a b = \t -> (1 - t) * a + t * b
+line1d a b t = (1 - t) * a + t * b
 
 --line1dT :: line1d
 --line1dT = 3.2  4.1 
