@@ -1,4 +1,4 @@
-{-# OPTIONS_GHC -fwarn-missing-signatures #-}
+--{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 -- http://www.lounge.se/wiki2/show/BezierCurves
 
 -- cabal install gloss
@@ -36,19 +36,19 @@ listify (a,b) = [a,b]
 -- Generalized higher order Bézier approximation in a single point u [0..1]
 bezier :: Float -> Bezier -> Vector
 bezier u (p1:p2:[]) = p1 + mulSV u (p2 `subV` p1)                 -- linear
-bezier u ps         = let pairs = map listify $ make_pairs ps   -- quadratic or higher
-                      in  bezier u $ map (bezier u) pairs
+bezier u ps         = let pairs = map (listify) $ make_pairs ps   -- quadratic or higher
+                      in  bezier u $ (map (bezier u)) $ pairs   
 
 -- Draw Bézier as picture
 drawBezier :: Bezier -> Picture
 drawBezier ps = let p1 = head ps
-                let pn = last ps
-                     nsteps = magV ( pn `subV` p1) / 5           -- ~ 5 pixel steps
-                     steps = [0, (min 0.5 (1/nsteps)) .. 1]
-                     curve = Color green $ Line $ map (`bezier` ps) steps
-                     linear = Color blue $ Line [p1, pn]
-                     outer = Color (greyN 0.75) $ Line ps
-                 in pictures [curve, linear, outer]
+                    pn = last ps
+                    nsteps = magV ( pn `subV` p1) / 5           -- ~ 5 pixel steps
+                    steps = [0, (min 0.5 (1/nsteps)) .. 1]
+                    curve = Color green $ Line $ map (`bezier` ps) steps
+                    linear = Color blue $ Line [p1, pn]
+                    outer = Color (greyN 0.75) $ Line ps
+                in pictures [curve, linear, outer]
 
 -- Demo
 b0 :: [(Float,Float)]

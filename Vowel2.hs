@@ -53,7 +53,7 @@ isVowel :: Char -> Bool
 isVowel x = x `elem` "aeioué"
 
 isConsonant :: Char -> Bool
-isConsonant x = (x `elem` "aeiou") == False --want the inverse
+isConsonant x = not (x `elem` "aeiou")  --want the inverse
 
 vowel :: String -> String
 vowel = filter isVowel
@@ -61,7 +61,7 @@ vowel = filter isVowel
 consonant :: String -> String
 consonant = filter isConsonant
 
-testWord1 :: [Char]
+testWord1 :: String
 testWord1 = "café"
 
 
@@ -74,7 +74,7 @@ main = do
   print testWord1
   print $ vowel testWord1
   print $ consonant testWord1
-  print $ "\233"
+  print  "\233"
   print $ "é"
 
 
