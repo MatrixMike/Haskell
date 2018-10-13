@@ -1,11 +1,12 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
-{-# START_FILE PropertiesTest.java #-}
+--    {-# START_FILE PropertiesTest.java #-}
 import System.Process
 
 {-
 GHC.IO.Exception.ExitCode  
 -}
---main :: IO ()   
+--main :: IO ()  
+--main :: IO GHC.IO.Exception.ExitCode 
 main = do
     system "javac PropertiesTest.java"
     system "java  PropertiesTest"

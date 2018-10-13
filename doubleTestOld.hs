@@ -6,6 +6,8 @@ https://stackoverflow.com/questions/3968265/integer-to-float
 -}
 main :: IO ()
 main = do
+  let a = 3
+  let b = 2
   let newy = fromIntegral a / fromIntegral b
   print $ posToXY 3.0 1.2
   print $ posToXYf 3.0 1.2

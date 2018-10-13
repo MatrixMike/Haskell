@@ -9,7 +9,7 @@ https://stackoverflow.com/questions/16404435/haskell-capitalize-all-letters-in-a
 
 import Data.List
 import Data.Char
-import Data.List
+--import Data.List
 
 main =  do
    putStrLn("Michael" `intersect` "Hewitt")
