@@ -1,25 +1,23 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 
+import Data.Char
 --main = print "Hello World"
 {-
 multiple line comments
 https://stackoverflow.com/questions/16404435/haskell-capitalize-all-letters-in-a-list-string-with-toupper
 -}
 -- import GHC.Generics
-
 import Data.List
-import Data.Char
+
 --import Data.List
+main = do
+  putStrLn ("Michael" `intersect` "Hewitt")
+  print $ fmap (* 2) list2
+  print $ fmap (fmap toUpper) stations1
+  print $ fmap (fmap toUpper) list3
 
-main =  do
-   putStrLn("Michael" `intersect` "Hewitt")
-   print $ fmap (* 2) list2
-   print $ fmap (fmap toUpper) stations1
-   print $ fmap (fmap toUpper) list3
 --   print $ fmap (* 3) listOfLists
-   
 --      putStrLn([stations1 intersect stations2])
-
 --       putStrLn(myAdd 4 5)
 --let sq x = x * x
 --print  (myAdd 3 4 )
@@ -31,6 +29,7 @@ myAdd x y = x + y
 myTuple = (1, "mjh")
 
 sunny = True
+
 {-    if sunny 
     then 1 
     else 0 
@@ -39,8 +38,7 @@ kindOfBagRequired =
     case xx
     0 -> "satchel"
     1 -> "bag"
- -}       
-
+ -}
 {-
 myMult3 :: Int -> (Int -> (Int ->Int))     -- curry  check with hlint
 myMult3 x y z = x*y*z
@@ -95,9 +93,7 @@ stations3 =
 
 allstations = [stations1, stations2, stations3]
 
-quicksort
-  :: (Ord a)
-  => [a] -> [a]
+quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
 quicksort (x:xs) =
   let smallerSorted = quicksort [a | a <- xs, a <= x]
@@ -227,12 +223,9 @@ initialInvaders =  concat [row1, row2, row3, row4, row5]
         where
           invaderPoss = map (\x -> (x, yy)) xposs
 -}
-
 --    show ("Michael" `intersect` "Hewitt")
-
 -- show ("Michael" `intersect` "Hewitt")
 a = 3.0
-
 
 --b=3.0
 c = 3.0
@@ -249,9 +242,7 @@ pythBodd1 x = (a * a) - 1
 --pythBodd b = (pythBodd1 / 2.0)
 --pythCodd :: (Int -> Int)
 --pythCodd c = b +1
-halve
-  :: (Fractional d)
-  => d -> d
+halve :: (Fractional d) => d -> d
 halve x = x * 0.5
 
 listOfLists = [[1, 2], [3, 4], [5, 6]]

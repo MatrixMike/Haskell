@@ -10,4 +10,7 @@ Using a lot of "stack exec -- ghc --make test2.hs"
 https://wiki.haskell.org/Literate_programming   : literate programming
 checking Int : Integer : Integral , see doubleTestold.hs and nestedLoopsXXX.hs
 
+example using some stack ghc ~/Haskell/celestrak1.hs
+
+
 

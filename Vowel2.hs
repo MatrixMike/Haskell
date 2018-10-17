@@ -1,6 +1,8 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
+
 import Data.ByteString.UTF8 as BSUTF8
+
 -- 08.10.2017 17:30:47
 -- 11.10.2017 21:36:05
 -- http://learnyouahaskell.com/syntax-in-functions
@@ -53,7 +55,7 @@ isVowel :: Char -> Bool
 isVowel x = x `elem` "aeioué"
 
 isConsonant :: Char -> Bool
-isConsonant x = not (x `elem` "aeiou")  --want the inverse
+isConsonant x = not (x `elem` "aeiou") --want the inverse
 
 vowel :: String -> String
 vowel = filter isVowel
@@ -64,7 +66,6 @@ consonant = filter isConsonant
 testWord1 :: String
 testWord1 = "café"
 
-
 main :: IO ()
 main = do
   print $ remVowels 'a'
@@ -74,7 +75,5 @@ main = do
   print testWord1
   print $ vowel testWord1
   print $ consonant testWord1
-  print  "\233"
+  print "\233"
   print $ "é"
-
-
