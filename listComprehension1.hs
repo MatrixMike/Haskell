@@ -1,3 +1,4 @@
+{-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Data.Char (toUpper)
 
 {-
@@ -16,6 +17,7 @@ remVowels c
 s :: String
 s = "Hello"
 
+b:: [Char]
 b = {-map toUpper-} [remVowels c | c <- ['a' .. 'z']]
 --print b
 
