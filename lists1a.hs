@@ -1,7 +1,7 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
 import Data.Char
 import Control.Applicative
-
+-- http://zvon.org/other/haskell/Outputprelude/foldr_f.html
 list :: [Integer]
 --list = [1, 2, 3, 4, 5]
 list = [1..5]
@@ -48,6 +48,7 @@ main = do
 
     print $ foldr (+) 0 list
     print $ foldr1 (+) list
+    print $ foldr1 (\x y -> (x+y)/2) [12,4,10,6] 
 
     print $ foldl (+) 0 list
     print $ foldl1 (+) list

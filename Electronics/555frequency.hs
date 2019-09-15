@@ -24,6 +24,12 @@ resistor1a = 1e3
 resistor2a :: Double
 resistor2a = 2e3
 
+alleles :: Double
+alleles = 4
+
+genotypes :: Double 
+genotypes =   ( alleles * ( alleles + 1 ) ) / 2  --   (alleles * (alleles+1))/2
+
 main :: IO ()
 main = do
   print capacitor1
@@ -36,3 +42,5 @@ main = do
   print resistor2a
   print $ 1.44 / ((resistor1 + (2 * resistor2)) * capacitor2)
   print $ 1.44 / ((resistor1a + (2 * resistor2a)) * capacitor1a)
+  print genotypes 
+  

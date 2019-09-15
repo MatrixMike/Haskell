@@ -13,4 +13,5 @@ main = do
   putStrLn "xxx"
   print [catenary a x | x <- [-0.7,-0.65 .. 0.7]]
   print $ exp 1     -- added just to test expression to get 2.718...  Naperian Logs 
-  print $ (1 - 1/(exp 1))
+  print $ (1 - 1/(exp 1))  -- RC time constant 
+  print $ (1 - 1/((exp 1) * (exp 1))) -- RC time constant 
