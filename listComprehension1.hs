@@ -1,4 +1,5 @@
 {-# OPTIONS_GHC -fwarn-missing-signatures #-}
+
 import Data.Char (toUpper)
 
 {-
@@ -12,28 +13,28 @@ remVowels c
   | c == 'o' = c
   | c == 'u' = c
   | otherwise = 'z'
-  where  x = 'x'
+  where
+    x = 'x'
 
 s :: String
 s = "Hello"
 
-b:: [Char]
-b = {-map toUpper-} [remVowels c | c <- ['a' .. 'z']]
+b :: [Char]
+b = [remVowels c | c <- ['a' .. 'z']] {-map toUpper-}
+
 --print b
-
-
 main :: IO ()
 main
 --  let a = [toUpper c | c <- "some text"]
  = do
   let s1 = ['a' .. 'w']
-  let a = [{-toUpper-} c | c <- [' ' .. '~']]
+  let a = [c | c <- [' ' .. '~']] {-toUpper-}
   print a
   print b
-  print [ x*y | x <- [2,5,10], y <- [8,10,11], x*y > 50]  
+  print [x * y | x <- [2, 5, 10], y <- [8, 10, 11], x * y > 50]
   --http://learnyouahaskell.com/starting-out#im-a-list-comprehension
-  print [ x*y*z | x <- [2,5,10], y <- [8,10,11], x*y > 50, z <- [2]]  
-
+  print "zzz"
+  print [x * y * z | x <- [2, 5, 10], y <- [8, 10, 11], x * y > 50, z <- [2]]
 {-
 "HELLO"
 -}
