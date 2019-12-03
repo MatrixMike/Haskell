@@ -11,12 +11,13 @@ let zoneNow  = utcToLocalTime timezone now
 --let zoneNow2 = utcToZonedTime timezone now
 let (year, month, day) = toGregorian $ localDay zoneNow
 -}
+--   now = getCurrentTime
 
 year :: Integer
-year=2014
+year=2019
 
 month :: Int
-month=2
+month=12
 
 months :: [String]
 months=["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"]
