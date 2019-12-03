@@ -2,7 +2,7 @@
 import Data.Time.Calendar
 import Data.Time.Calendar.WeekDate
 import Data.Char
-
+-- this fails for December 2019 - wrong day for start
 {-do
    now <- getCurrentTime
    timezone <- getCurrentTimeZone

@@ -33,6 +33,6 @@ generateCalendar=printLine++"\n "++
                         genD 1
 main :: IO ()
 main=do
-     print $ monthDate
-     print $ totalDays
+     print  monthDate
+     print  totalDays
      putStrLn generateCalendar
