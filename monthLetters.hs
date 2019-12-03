@@ -12,17 +12,17 @@ year=2019
 month :: Int
 month=12
 
-months :: [[Char]]
+months :: [String]
 months=["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"]
 
-mnth :: [Char]
+mnth :: String
 mnth=months!!(month-1)
 
 main :: IO ()
 main=do
-       print $ year
-       print $ month
-       print $ mnth
+       print  year
+       print  month
+       print  mnth
        print $ concat [[r]++"\t|" | r <- mnth]
 -- want to show max and min numbers of letters in month names
 -- 7 days in week but December has 8 letters in it's word
