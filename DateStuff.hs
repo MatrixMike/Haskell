@@ -11,10 +11,10 @@ getDaysInMonth year month=(nDays,sDay)
                           where nDays = gregorianMonthLength year month
                                 sDay= digitToInt(last(showWeekDate (fromGregorian year month 01)))
 year :: Integer
-year=2013
+year=2019
 
 month :: Int
-month=10
+month=12
 
 months=["JANUARY","FEBRUARY","MARCH","APRIL","MAY","JUNE","JULY","AUGUST","SEPTEMBER","OCTOBER","NOVEMBER","DECEMBER"]
 mnth=months!!(month-1)
