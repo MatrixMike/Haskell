@@ -31,6 +31,7 @@ main
   let a = [c | c <- [' ' .. '~']] {-toUpper-}
   print a
   print b
+  print [x  | x <- [2, 5,7, 10]]
   print [x * y | x <- [2, 5, 10], y <- [8, 10, 11], x * y > 50]
   --http://learnyouahaskell.com/starting-out#im-a-list-comprehension
   print "zzz"
