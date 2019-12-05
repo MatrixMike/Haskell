@@ -26,16 +26,16 @@ main :: IO ()
 main = do
     print weekday
     print weekday2
-    print $ fromGregorian year month 01
+    print $ fromGregorian year month 0
     print $ showWeekDate (fromGregorian year month 01)
     print $ last (showWeekDate (fromGregorian year month 01))
     print $ digitToInt (last (showWeekDate (fromGregorian year month 01)))
     print $ day !! digitToInt (last (showWeekDate (fromGregorian year 1 01)))
-    print $ day !! digitToInt (last (showWeekDate (fromGregorian year 1 01)))
+    print $ day !! digitToInt (last (showWeekDate (fromGregorian year 11 01)))    -- year month day
     print $ a
     print $ [x-1 | x<-a] 
 --     print $      -- want to act on each in range
     print [x  | x <- [2, 5,7, 10]]
     print [x*2  | x <- [2, 5,7, 10]]
     print [x*2  | x <- a]
-    print [day !! digitToInt (last (showWeekDate (fromGregorian year x 01)))  | x <- [1..7]]
+    print [day !! digitToInt (last (showWeekDate (fromGregorian year x 0)))  | x <- [1..8]]
