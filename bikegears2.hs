@@ -9,7 +9,7 @@ http://learnyouahaskell.com/making-our-own-types-and-typeclasses#the-functor-typ
 not sure what is going on here (yet)
 -}
 bg :: [Double]
-bg = (/)  <$> [22.0, 32.0, 42.0] <*> [26, 23, 21, 19, 17, 15, 13, 12]
+bg = (/)  <$> [22.0, 32.0, 46.0] <*> [14,17,20,24,28]
 --                                    [26 23 21 19 17 15 13 12]
 
 main :: IO ()

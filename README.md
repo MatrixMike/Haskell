@@ -12,5 +12,5 @@ checking Int : Integer : Integral , see doubleTestold.hs and nestedLoopsXXX.hs
 
 example using some stack ghc ~/Haskell/celestrak1.hs
 
-
+Use geany on White tower to compile bikegears1.hs. It will involve other haskell source and automatically compile those modules.
 
