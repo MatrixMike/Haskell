@@ -1,7 +1,13 @@
-module Main where
+{-# START_FILE main.hs #-}
+import System.Process
 
-import Game
+main = do
+    system "javac Main.java"	
+    system "java Main"
 
-
-main :: IO ()
-main = game False
+{-# START_FILE Main.java #-}
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, world!");
+    }
+}
